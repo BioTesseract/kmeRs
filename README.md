@@ -5,10 +5,10 @@ The package contains tools to calculate DNA similarity score matrix for k length
 
 
 Depends: R (>= 3.4.0) <br/>
-License: GPL-3
-Encoding: UTF-8
-URL: http://github.com/RafalUrniaz/kmeRs
-BugReports: http://github.com/RafalUrniaz/kmeRs/issues
+License: GPL-3 <br/>
+Encoding: UTF-8<br/> 
+URL: http://github.com/RafalUrniaz/kmeRs <br/>
+BugReports: http://github.com/RafalUrniaz/kmeRs/issues <br/>
 
 
 References
