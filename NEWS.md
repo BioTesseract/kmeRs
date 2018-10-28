@@ -3,7 +3,6 @@
 Main package functions, added and tested:
 
 * `kmeRs_similarity_matrix()`
-
 * `kmeRs_score_and_sort()`
 
 * `kmeRs_show_alignment()`
