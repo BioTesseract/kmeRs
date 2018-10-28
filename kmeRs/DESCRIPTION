@@ -1,5 +1,3 @@
-# kmeRs: The k-mers similarity score matrix package
-
 Package: kmeRs
 Title: K-mers similarity score matrix
 Version: 1.1.0
@@ -17,6 +15,7 @@ Encoding: UTF-8
 URL: http://github.com/RafalUrniaz/kmeRs
 BugReports: http://github.com/RafalUrniaz/kmeRs/issues
 LazyData: true
+biocViews: Software
 Imports: tcR,
     rDNAse,
     utils,
@@ -26,4 +25,3 @@ Suggests: knitr,
     ape (>= 4.0),
     rmarkdown
 VignetteBuilder: knitr
-
