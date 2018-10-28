@@ -18,3 +18,4 @@ Needleman, Saul B., and Christian D. Wunsch. 1970. “A General Method Applicabl
 
 Smith, T.F., and M.S. Waterman. 1981. “Identification of Common Molecular Subsequences.” *Journal of Molecular Biology* 147 (1): 195–97. doi:[https://doi.org/10.1016/0022-2836(81)90087-5](https://doi.org/https://doi.org/10.1016/0022-2836(81)90087-5).
 
+

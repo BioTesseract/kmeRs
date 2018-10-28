@@ -23,9 +23,8 @@ knitr::opts_chunk$set(
   knitr::kable(result) 
 
 ## ------------------------------------------------------------------------
-# Score the matrix  
+# Score and sort the matrix  
   result <- kmeRs_score_and_sort(result)
-  result <- result[ , "GATTACA"]
 # Fancy knitr table
   knitr::kable(result)
 
@@ -34,18 +33,14 @@ knitr::opts_chunk$set(
   kmers_given <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
 # Matrix calculation 
   result <- kmeRs_similarity_matrix(kmers_given = kmers_given, submat = "BLOSUM62")
-# Fancy knitr table
-  knitr::kable(result)
-
-## ------------------------------------------------------------------------
-# Score the matrix  
+# Score the matrix and sort by decreasing score 
   result <- kmeRs_score_and_sort(result)
 # Fancy knitr table
   knitr::kable(result)
 
 ## ------------------------------------------------------------------------
-
-  library(kmeRs)
-  knitr::kable(kmeRs_test_package())
-
+# Score the matrix and sort by decreasing score 
+  result <- kmeRs_statistics(result, summary_statistics_only =TRUE)
+# Fancy knitr table
+  knitr::kable(result)
 

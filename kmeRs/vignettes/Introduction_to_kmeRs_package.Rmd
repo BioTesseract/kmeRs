@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
 The package contains tools to calculate DNA similarity score matrix for k length given k-mers vs. different k-mers combination. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. The results are evaluated by global similarity score calculated by Needleman-Wunsch global [@NEEDLEMAN1970443] alignment or Smith-Waterman local alignment [@SMITH1981195]. Higher similarity score indicates more similar sequences for BLOSUM and opposite for PAM matrix.
 
 ### Import the package first
-
+   
 ```{r} 
 # Import the package 
   library(kmeRs)
@@ -65,7 +65,6 @@ Now, applying function **kmeRs_score_and_sort** let's score the matrix and sort 
 
 As can be observed above, the most *'different'* sequence to GATTACA is ACAGATT with score equal to 1 and the most similar to GATTACA  sequence is of course GATTACA sequence with the highest score equal to 37. 
 
-
 ### Example 3. How to find the most *'different'* k-mer comparing to the whole given set of k-mers? 
 
 In this example we will try to find the most different k-mer from the whole given set of heptamers. Here, 7 heptamer (being an anagram of movie title "GATTACA" ) are given, as follow: 
@@ -79,19 +78,20 @@ In this example we will try to find the most different k-mer from the whole give
   result <- kmeRs_score_and_sort(result)
 # Fancy knitr table
   knitr::kable(result)
+  
 ```
 
+As can be observed, the most *'different'* sequence to all given heptamers is CTATAGA with score equal to 62 and the most similar sequence is GAAATCT with the highest score equal to 97.
 
+### Example 4. How to calculate basic statistics for the matrix?
 
-### Example 3. 
+Applying function **kmeRs_statistics** to the result matrix in example 3, we can calculate the basic statistics as additional columns to the matrix. When **summary_statistics_only** is set to TRUE only summary table is shown. It is much more elegant way to present results, especially in case of big data output.  
 
-For example, the matrix for hexamers is defined as all possible combination of 6-mers (N= 4^6 = 4096) vs. list of k length given k-mers.
-
-```{r} 
-
-  library(kmeRs)
-  knitr::kable(kmeRs_test_package())
-
+```{r}
+# Score the matrix and sort by decreasing score 
+  result <- kmeRs_statistics(result)
+# Fancy knitr table
+  knitr::kable(result)
 ```
 
 ## References

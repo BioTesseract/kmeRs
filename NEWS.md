@@ -8,5 +8,3 @@ Main package functions, added and tested:
 * `kmeRs_statistics()`
 * `kmeRs_transcript_to_complementary()`
 * `kmeRs_test_package()`
-
-
