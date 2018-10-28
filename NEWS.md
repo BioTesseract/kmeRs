@@ -2,16 +2,16 @@
 
 Main package functions, added and tested:
 
-*`kmeRs_similarity_matrix()`
+* `kmeRs_similarity_matrix()`
 
-*`kmeRs_score_and_sort()`
+* `kmeRs_score_and_sort()`
 
-*`kmeRs_show_alignment()`
+* `kmeRs_show_alignment()`
 
-*`kmeRs_statistics()`
+* `kmeRs_statistics()`
 
-*`kmeRs_transcript_to_complementary()`
+* `kmeRs_transcript_to_complementary()`
 
-*`kmeRs_test_package()`
+* `kmeRs_test_package()`
 
 
