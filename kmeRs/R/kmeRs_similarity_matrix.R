@@ -73,7 +73,9 @@
         seqA <- colnames(kmers_dist_matrix)[col]
         seqB <- rownames(kmers_dist_matrix)[row]
 
-        kmers_dist_matrix[row, col] <- rDNAse::twoSeqSim(seqA, seqB, type = "global", submat = submat)@score # TO-DO: more precise method may be applied
+        result <- rDNAse::twoSeqSim(seqA, seqB, type = "global", submat = submat)
+
+        kmers_dist_matrix[row, col] <- slot(result, 'score')  # TO-DO: more precise method may be applied
 
       }
     }
