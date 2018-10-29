@@ -1,0 +1,2 @@
+language: R
+before_script: cd kmeRs
