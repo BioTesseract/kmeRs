@@ -1,6 +1,5 @@
-title: "Introduction to the kmeRs package"
-author:
-- name: Rafal Urniaz, PhD^
+#Introduction to the kmeRs package
+*Rafal Urniaz, PhD*
 
 Introduction
 ------------
