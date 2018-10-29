@@ -1,2 +1,3 @@
-language: R
+language: r
 before_script: cd kmeRs
+before_install: cd kmeRs
