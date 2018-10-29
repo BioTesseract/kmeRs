@@ -40,7 +40,7 @@
 
   # Compare to the same set by default
 
-    if (compare_to[1] == ''){
+    if ('' %in% compare_to){
 
       compare_to <- kmers_given
 
@@ -48,7 +48,7 @@
 
   # If compare_to_all == TRUE - Generate all possible k-mers from DNA alphabet
 
-    if (compare_to[1] == 'ALL'){
+    if ('ALL' %in% compare_to){
 
       compare_to <- tcR::generate.kmers(.k = k, .seq = '', .alphabet = c('A', 'C', 'G', 'T'))
 

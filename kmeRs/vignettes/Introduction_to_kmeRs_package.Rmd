@@ -10,7 +10,7 @@ output: rmarkdown::html_vignette
 bibliography: citations.bib
 vignette: >
   %\VignetteIndexEntry{Introduction to the kmeRs R package}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEngine{knitr::knitr}
   %\VignetteEncoding{UTF-8}
 ---
 
