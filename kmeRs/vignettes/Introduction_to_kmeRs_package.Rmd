@@ -92,7 +92,7 @@ Applying function **kmeRs_statistics** to the result matrix in example 3, we can
 # Score the matrix and sort by decreasing score 
   result <- kmeRs_statistics(result)
 # Fancy knitr table
-  knitr::kable(result[ , 1:length(result [1,])-4])
+  knitr::kable(result[ , 1:(length(result[1, ])-4)])
 ```
 
 ## References
