@@ -1,6 +1,6 @@
 # kmeRs 1.1.0
 
-Main package functions, added and tested:
+Main package functions - added and tested:
 
 * `kmeRs_similarity_matrix()`
 * `kmeRs_score_and_sort()`
