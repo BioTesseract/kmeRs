@@ -4,6 +4,7 @@ author:
 - name: Rafal Urniaz, PhD^[BioTesseract Cambridge Bioinformatics Solutions, Cambridgeshire, Cambridge, UK]
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
+  # pdf_document
   # md_document:
   #    variant: markdown_github
 bibliography: citations.bib
@@ -91,7 +92,7 @@ Applying function **kmeRs_statistics** to the result matrix in example 3, we can
 # Score the matrix and sort by decreasing score 
   result <- kmeRs_statistics(result)
 # Fancy knitr table
-  knitr::kable(result)
+  knitr::kable(result[ , 1:length(result [1,])-4])
 ```
 
 ## References
