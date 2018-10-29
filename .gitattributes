@@ -1,0 +1,19 @@
+# Basic .gitattributes for a R repo.
+
+kmeRs/* linguist-vendored
+kmeRs/docs/* linguist-vendored
+/kmeRs/kmeRs/vignettes/*.html linguist-vendored
+kmeRs/kmeRs/vignettes/*.html linguist-vendored
+/kmeRs/vignettes/*.html linguist-vendored
+kmeRs/vignettes/*.html linguist-vendored
+/vignettes/*.html linguist-vendored
+
+# Source files
+# ============
+*.Rdata     text
+*.rdb       binary
+*.rds       binary
+*.Rd        text
+*.Rdx       binary
+*.Rmd		text
+*.R text
