@@ -40,7 +40,7 @@
 
   # Compare to the same set by default
 
-    if ('' %in% compare_to){
+    if (compare_to[1] == ''){
 
       compare_to <- kmers_given
 
@@ -48,7 +48,7 @@
 
   # If compare_to_all == TRUE - Generate all possible k-mers from DNA alphabet
 
-    if ('ALL' %in% compare_to){
+    if (compare_to[1] == 'ALL'){
 
       compare_to <- tcR::generate.kmers(.k = k, .seq = '', .alphabet = c('A', 'C', 'G', 'T'))
 
@@ -73,7 +73,8 @@
         seqA <- colnames(kmers_dist_matrix)[col]
         seqB <- rownames(kmers_dist_matrix)[row]
 
-        kmers_dist_matrix[row, col] <- rDNAse::twoSeqSim(seqA, seqB, type = "global", submat = submat)@score # TO-DO: more precise method may be applied
+        result <- rDNAse::twoSeqSim(seqA, seqB, type = "global", submat = submat)
+        kmers_dist_matrix[row, col] <- slot(result, 'score') # TO-DO: more precise method may be applied
 
       }
     }
