@@ -1,4 +1,4 @@
-#Introduction to the kmeRs package
+# Introduction to the kmeRs package
 *Rafal Urniaz, PhD*
 
 Introduction
