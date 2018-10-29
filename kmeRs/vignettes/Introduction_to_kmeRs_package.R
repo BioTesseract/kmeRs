@@ -37,10 +37,11 @@ knitr::opts_chunk$set(
   result <- kmeRs_score_and_sort(result)
 # Fancy knitr table
   knitr::kable(result)
+  
 
 ## ------------------------------------------------------------------------
 # Score the matrix and sort by decreasing score 
-  result <- kmeRs_statistics(result, summary_statistics_only =TRUE)
+  result <- kmeRs_statistics(result)
 # Fancy knitr table
-  knitr::kable(result)
+  knitr::kable(result[ , 1:(length(result[1, ])-4)])
 
