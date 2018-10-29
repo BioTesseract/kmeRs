@@ -11,8 +11,6 @@
 #'
 #' @aliases kmeRs_similarity_matrix
 #'
-#' @usage kmeRs_similarity_matrix(kmers_given, k = 3, submat = "BLOSUM62", save_to_file = '' )
-#'
 #' @param kmers_given vector with given k-mers
 #' @param compare_to this parameter can have 3 different states, when:
 #' '' - the \code{kmers_given} will be compared to each other, default value;

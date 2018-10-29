@@ -4,7 +4,9 @@
 \alias{kmeRs_similarity_matrix}
 \title{Pairwise Similarity Matrix}
 \usage{
-kmeRs_similarity_matrix(kmers_given, k = 3, submat = "BLOSUM62", save_to_file = '' )
+kmeRs_similarity_matrix(kmers_given, compare_to = "",
+  alignment_type = "global", k = 3, submat = "BLOSUM62",
+  save_to_file = "")
 }
 \arguments{
 \item{kmers_given}{vector with given k-mers}

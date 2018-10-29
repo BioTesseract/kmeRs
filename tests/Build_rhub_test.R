@@ -1,7 +1,3 @@
-# Manual generation
-
-system("R CMD Rd2pdf . --title=Package kmeRs --output=./manual.pdf --force --no-clean --internals")
-
 # Multiple platforms testing at https://github.com/r-hub/rhub
 
 library(rhub)
@@ -15,3 +11,8 @@ check()
 rhub::check_for_cran()
 
 # | OK |
+
+# Run BiocCheck after running R CMD check.
+
+library(BiocCheck)
+BiocCheck("kmeRs_1.1.0.tar.gz")
