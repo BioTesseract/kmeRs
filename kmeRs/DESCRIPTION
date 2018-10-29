@@ -19,7 +19,8 @@ biocViews: Software
 Imports: tcR,
     rDNAse,
     utils,
-    stats
+    stats,
+    Biostrings
 RoxygenNote: 6.1.0
 Suggests: knitr,
     ape (>= 4.0),

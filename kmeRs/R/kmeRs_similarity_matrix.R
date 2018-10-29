@@ -28,6 +28,7 @@
 #' @importFrom rDNAse twoSeqSim
 #' @importFrom utils write.csv2
 #' @importFrom tcR generate.kmers
+#' @importFrom Biostrings score
 #'
 #' @export
 
@@ -73,9 +74,7 @@
         seqA <- colnames(kmers_dist_matrix)[col]
         seqB <- rownames(kmers_dist_matrix)[row]
 
-        result <- rDNAse::twoSeqSim(seqA, seqB, type = "global", submat = submat)
-
-        kmers_dist_matrix[row, col] <- slot(result, 'score')  # TO-DO: more precise method may be applied
+        kmers_dist_matrix[row, col] <- Biostrings::score(rDNAse::twoSeqSim(seqA, seqB, type = "global", submat = submat))  # TO-DO: more precise method may be applied
 
       }
     }
