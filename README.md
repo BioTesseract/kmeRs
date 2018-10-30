@@ -22,7 +22,7 @@ kmeRs::kmeRs_test_package()
 ```
 
 Depends: R (>= 3.4.0) <br/>
-Imports: tcR, rDNAse, utils, stats, Biostrings
+Imports: tcR, rDNAse, utils, stats, Biostrings <br/>
 Encoding: UTF-8<br/> 
 
 References
