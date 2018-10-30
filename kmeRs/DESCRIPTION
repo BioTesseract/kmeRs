@@ -1,5 +1,5 @@
 Package: kmeRs
-Title: K-mers similarity score matrix
+Title: K-Mers Similarity Score Matrix
 Version: 1.1.0
 Authors@R: person("Rafal", "Urniaz", email = "rafal.urniaz@gmail.com", role = c("aut", "cre"))
 Description: Contains tools to calculate DNA similarity score matrix for k length given k-mers 

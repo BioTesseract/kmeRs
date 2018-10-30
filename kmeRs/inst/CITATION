@@ -5,8 +5,7 @@ citEntry(entry = "Manual",
    author = personList(as.person("Rafal Urniaz")),
    url = "https://cran.r-project.org/package=kmeRs",
    year   = "2018",
-   doi = "10.5281/zenodo.1469823",
-   textVersion =
-   paste("Urniaz Rd (2018) kmeRs: an R package for k-mers similarity score calculations. R package version 1.1.0.",
+   textVersion = "1.0",
+   paste("Urniaz RD (2018) kmeRs: an R package for k-mers similarity score calculations. R package version 1.1.0.",
          "https://cran.r-project.org/package=kmeRs")
 )
