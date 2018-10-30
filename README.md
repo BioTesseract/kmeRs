@@ -1,4 +1,3 @@
-[![Travis (.com)](https://img.shields.io/travis/com/:RafalUrniaz/:kmeRs.svg?style=for-the-badge)](https://travis-ci.com/RafalUrniaz/kmeRs) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/badges/shields.svg?style=for-the-badge)
 [![Build Status](https://travis-ci.com/RafalUrniaz/kmeRs.svg?branch=master)](https://travis-ci.com/RafalUrniaz/kmeRs) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 # kmeRs: The k-mers similarity score matrix package
