@@ -8,11 +8,10 @@ The package contains tools to calculate similarity score matrix for DNA k-mers. 
 
 ```r
 # Install from CRAN
-~~install.packages("")~~
+install.packages("")
 
 # Or the development version from GitHub:
 # install.packages("devtools")
-library("devtools")
 devtools::install_github("rafalurniaz/kmeRs/kmeRs/")
 ```
 ## Quick demo 
