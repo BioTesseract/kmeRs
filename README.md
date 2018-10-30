@@ -12,7 +12,7 @@ The package contains tools to calculate similarity score matrix for DNA k-mers. 
 
 # Or the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("r-lib/devtools")
+devtools::install_github("")
 ```
 
 Depends: R (>= 3.4.0) <br/>
