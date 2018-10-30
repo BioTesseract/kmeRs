@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/%20bioc__check-true-green.svg) [![Build Status](https://travis-ci.com/RafalUrniaz/kmeRs.svg?branch=master)](https://travis-ci.com/RafalUrniaz/kmeRs) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/devtools)](https://cran.r-project.org/package=devtools)
 
-# kmeRs: The k-mers similarity score matrix package
+# kmeRs: K-Mers Similarity Score Matrix
 
 The package contains tools to calculate similarity score matrix for DNA k-mers. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix. The results are evaluated by similarity score calculated by Needleman-Wunsch (global) (Needleman and Wunsch 1970) or Smith-Waterman (local) alignment. (Smith and Waterman 1981). Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively.
 
@@ -12,11 +12,17 @@ The package contains tools to calculate similarity score matrix for DNA k-mers. 
 
 # Or the development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("")
+library("devtools")
+devtools::install_github("rafalurniaz/kmeRs/kmeRs/")
+```
+## Quick demo 
+
+```r
+kmeRs::kmeRs_test_package()
 ```
 
 Depends: R (>= 3.4.0) <br/>
-License: GPL-3 <br/>
+Imports: tcR, rDNAse, utils, stats, Biostrings
 Encoding: UTF-8<br/> 
 
 References
