@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 ```
 ## Introduction
 
-The package contains tools to calculate DNA similarity score matrix for k length given k-mers vs. different k-mers combination. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. The results are evaluated by global similarity score calculated by Needleman-Wunsch global [@NEEDLEMAN1970443] alignment or Smith-Waterman local alignment [@SMITH1981195]. Higher similarity score indicates more similar sequences for BLOSUM and opposite for PAM matrix.
+The package contains tools to calculate similarity score matrix for DNA k-mers. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix. The results are evaluated by similarity score calculated by Needleman-Wunsch (global) [@NEEDLEMAN1970443] or Smith-Waterman (local) alignment. [@SMITH1981195]. Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively.
 
 ### Import the package first
    
@@ -33,7 +33,7 @@ The package contains tools to calculate DNA similarity score matrix for k length
 
 ### Example 1. How to display PAM or BLOSUM matrix used for calculation?
 
-Simply apply the **kmeRs_similarity_matrix** function and mark as an input the vector contains the nucleotides letters for witch the scores should be calculated.    
+Simply apply the **kmeRs_similarity_matrix** function and mark as an input the vector contains the nucleotides letters for witch the score should be calculated.    
 
 ```{r} 
 # Simple BLOSUM62 similarity matrix for all DNA nucleotides
@@ -44,7 +44,7 @@ Simply apply the **kmeRs_similarity_matrix** function and mark as an input the v
 
 ### Example 2. How to find the most *'different'* k-mer from the given set of k-mers?
 
-In this example we will try to find the most different k-mer to "GATTACA" sequence from given set of heptamers. Here, 7 heptamer (being an anagram of the movie title "GATTACA") are given, as follow:  
+In this example, the most *'different'* k-mer to "GATTACA" sequence will be indicated from given set of heptamers. Here, 7 heptamer (being an anagram of the movie title "GATTACA") are given, as follow:  
 
 ```{r} 
 # Given hexamers
@@ -55,7 +55,7 @@ In this example we will try to find the most different k-mer to "GATTACA" sequen
   knitr::kable(result) 
 ```
 
-Now, applying function **kmeRs_score_and_sort** let's score the matrix and sort by decreasing score value. The lowest value (in case of BLOSUM) indicates the most 'different' sequence from given k-mers, in contrast to the highest value which indicates the most similar one. 
+Now, applying **kmeRs_score_and_sort** function the total score is calculated and the matrix is sorted by decreasing score value. The lowest value (in case of BLOSUM) indicates the most *'different'* sequence from given k-mers, in contrast to the highest value which indicates the most similar one. 
 
 ```{r} 
 # Score and sort the matrix  
@@ -64,11 +64,11 @@ Now, applying function **kmeRs_score_and_sort** let's score the matrix and sort 
   knitr::kable(result)
 ```
 
-As can be observed above, the most *'different'* sequence to GATTACA is ACAGATT with score equal to 1 and the most similar to GATTACA  sequence is of course GATTACA sequence with the highest score equal to 37. 
+As can be observed, the most *'different'* sequence to GATTACA is ACAGATT with total score equal to 1 and the most similar to GATTACA sequence is of course GATTACA sequence with the highest score equal to 37. 
 
-### Example 3. How to find the most *'different'* k-mer comparing to the whole given set of k-mers? 
+### Example 3. How to find the most *'different'* k-mer to whole given set of k-mers? 
 
-In this example we will try to find the most different k-mer from the whole given set of heptamers. Here, 7 heptamer (being an anagram of movie title "GATTACA" ) are given, as follow: 
+In this example, the most *'different'* k-mer to whole given set of heptamers will be indicated. The same heptamers as in example 2 are used. 
 
 ```{r} 
 # Given hexamers
@@ -86,7 +86,7 @@ As can be observed, the most *'different'* sequence to all given heptamers is CT
 
 ### Example 4. How to calculate basic statistics for the matrix?
 
-Applying function **kmeRs_statistics** to the result matrix in example 3, we can calculate the basic statistics as additional columns to the matrix. When **summary_statistics_only** is set to TRUE only summary table is shown. It is much more elegant way to present results, especially in case of big data output.  
+Applying function **kmeRs_statistics** to the result matrix (here, result matrix from example 3) the basic statistics can be calculated as additional columns. When **summary_statistics_only** is set to TRUE only summary table is returned. It is much more elegant way to present results, especially in case of *'big data'* output.  
 
 ```{r}
 # Score the matrix and sort by decreasing score 

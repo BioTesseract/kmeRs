@@ -15,14 +15,14 @@
 
   kmeRs_score_and_sort <- function(kmeRs_similarity_matrix){
 
-    # Calculate the global score
+    # Calculate the total score
 
-      score_global <- apply(kmeRs_similarity_matrix, 1, sum)
-      kmeRs_similarity_matrix <- cbind(kmeRs_similarity_matrix, score_global)
+      score_total <- apply(kmeRs_similarity_matrix, 1, sum)
+      kmeRs_similarity_matrix <- cbind(kmeRs_similarity_matrix, score_total)
 
     # Sort by scoring
 
-      kmeRs_similarity_matrix <- kmeRs_similarity_matrix[order(kmeRs_similarity_matrix$score_global, decreasing = FALSE), ]
+      kmeRs_similarity_matrix <- kmeRs_similarity_matrix[order(kmeRs_similarity_matrix$score_total, decreasing = FALSE), ]
 
     # Return matrix
 

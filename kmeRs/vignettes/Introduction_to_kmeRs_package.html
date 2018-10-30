@@ -75,7 +75,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>The package contains tools to calculate DNA similarity score matrix for k length given k-mers vs. different k-mers combination. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. The results are evaluated by global similarity score calculated by Needleman-Wunsch global <span class="citation">(Needleman and Wunsch 1970)</span> alignment or Smith-Waterman local alignment <span class="citation">(Smith and Waterman 1981)</span>. Higher similarity score indicates more similar sequences for BLOSUM and opposite for PAM matrix.</p>
+<p>The package contains tools to calculate similarity score matrix for DNA k-mers. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix. The results are evaluated by similarity score calculated by Needleman-Wunsch (global) <span class="citation">(Needleman and Wunsch 1970)</span> or Smith-Waterman (local) alignment. <span class="citation">(Smith and Waterman 1981)</span>. Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively.</p>
 <div id="import-the-package-first" class="section level3">
 <h3>Import the package first</h3>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Import the package </span>
@@ -83,7 +83,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="example-1.-how-to-display-pam-or-blosum-matrix-used-for-calculation" class="section level3">
 <h3>Example 1. How to display PAM or BLOSUM matrix used for calculation?</h3>
-<p>Simply apply the <strong>kmeRs_similarity_matrix</strong> function and mark as an input the vector contains the nucleotides letters for witch the scores should be calculated.</p>
+<p>Simply apply the <strong>kmeRs_similarity_matrix</strong> function and mark as an input the vector contains the nucleotides letters for witch the score should be calculated.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Simple BLOSUM62 similarity matrix for all DNA nucleotides</span>
   result &lt;-<span class="st"> </span><span class="kw">kmeRs_similarity_matrix</span>(<span class="dt">kmers_given =</span> <span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;T&quot;</span>, <span class="st">&quot;C&quot;</span>, <span class="st">&quot;G&quot;</span>), <span class="dt">submat =</span> <span class="st">&quot;BLOSUM62&quot;</span>)
 <span class="co"># Fancy knitr table</span>
@@ -132,7 +132,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="example-2.-how-to-find-the-most-different-k-mer-from-the-given-set-of-k-mers" class="section level3">
 <h3>Example 2. How to find the most <em>‘different’</em> k-mer from the given set of k-mers?</h3>
-<p>In this example we will try to find the most different k-mer to “GATTACA” sequence from given set of heptamers. Here, 7 heptamer (being an anagram of the movie title “GATTACA”) are given, as follow:</p>
+<p>In this example, the most <em>‘different’</em> k-mer to “GATTACA” sequence will be indicated from given set of heptamers. Here, 7 heptamer (being an anagram of the movie title “GATTACA”) are given, as follow:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Given hexamers</span>
   kmers_given &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;GATTACA&quot;</span>, <span class="st">&quot;ACAGATT&quot;</span>, <span class="st">&quot;GAATTAC&quot;</span>, <span class="st">&quot;GAAATCT&quot;</span>, <span class="st">&quot;CTATAGA&quot;</span>, <span class="st">&quot;GTACATA&quot;</span>, <span class="st">&quot;AACGATT&quot;</span>)
 <span class="co"># Matrix calculation </span>
@@ -177,7 +177,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
-<p>Now, applying function <strong>kmeRs_score_and_sort</strong> let’s score the matrix and sort by decreasing score value. The lowest value (in case of BLOSUM) indicates the most ‘different’ sequence from given k-mers, in contrast to the highest value which indicates the most similar one.</p>
+<p>Now, applying <strong>kmeRs_score_and_sort</strong> function the total score is calculated and the matrix is sorted by decreasing score value. The lowest value (in case of BLOSUM) indicates the most <em>‘different’</em> sequence from given k-mers, in contrast to the highest value which indicates the most similar one.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Score and sort the matrix  </span>
   result &lt;-<span class="st"> </span><span class="kw">kmeRs_score_and_sort</span>(result)
 <span class="co"># Fancy knitr table</span>
@@ -187,7 +187,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <tr class="header">
 <th></th>
 <th align="right">GATTACA</th>
-<th align="right">score_global</th>
+<th align="right">score_total</th>
 </tr>
 </thead>
 <tbody>
@@ -228,11 +228,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </tr>
 </tbody>
 </table>
-<p>As can be observed above, the most <em>‘different’</em> sequence to GATTACA is ACAGATT with score equal to 1 and the most similar to GATTACA sequence is of course GATTACA sequence with the highest score equal to 37.</p>
+<p>As can be observed, the most <em>‘different’</em> sequence to GATTACA is ACAGATT with total score equal to 1 and the most similar to GATTACA sequence is of course GATTACA sequence with the highest score equal to 37.</p>
 </div>
-<div id="example-3.-how-to-find-the-most-different-k-mer-comparing-to-the-whole-given-set-of-k-mers" class="section level3">
-<h3>Example 3. How to find the most <em>‘different’</em> k-mer comparing to the whole given set of k-mers?</h3>
-<p>In this example we will try to find the most different k-mer from the whole given set of heptamers. Here, 7 heptamer (being an anagram of movie title “GATTACA” ) are given, as follow:</p>
+<div id="example-3.-how-to-find-the-most-different-k-mer-to-whole-given-set-of-k-mers" class="section level3">
+<h3>Example 3. How to find the most <em>‘different’</em> k-mer to whole given set of k-mers?</h3>
+<p>In this example, the most <em>‘different’</em> k-mer to whole given set of heptamers will be indicated. The same heptamers as in example 2 are used.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Given hexamers</span>
   kmers_given &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;GATTACA&quot;</span>, <span class="st">&quot;ACAGATT&quot;</span>, <span class="st">&quot;GAATTAC&quot;</span>, <span class="st">&quot;GAAATCT&quot;</span>, <span class="st">&quot;CTATAGA&quot;</span>, <span class="st">&quot;GTACATA&quot;</span>, <span class="st">&quot;AACGATT&quot;</span>)
 <span class="co"># Matrix calculation </span>
@@ -252,7 +252,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <th align="right">CTATAGA</th>
 <th align="right">GTACATA</th>
 <th align="right">AACGATT</th>
-<th align="right">score_global</th>
+<th align="right">score_total</th>
 </tr>
 </thead>
 <tbody>
@@ -339,7 +339,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="example-4.-how-to-calculate-basic-statistics-for-the-matrix" class="section level3">
 <h3>Example 4. How to calculate basic statistics for the matrix?</h3>
-<p>Applying function <strong>kmeRs_statistics</strong> to the result matrix in example 3, we can calculate the basic statistics as additional columns to the matrix. When <strong>summary_statistics_only</strong> is set to TRUE only summary table is shown. It is much more elegant way to present results, especially in case of big data output.</p>
+<p>Applying function <strong>kmeRs_statistics</strong> to the result matrix (here, result matrix from example 3) the basic statistics can be calculated as additional columns. When <strong>summary_statistics_only</strong> is set to TRUE only summary table is returned. It is much more elegant way to present results, especially in case of <em>‘big data’</em> output.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Score the matrix and sort by decreasing score </span>
   result &lt;-<span class="st"> </span><span class="kw">kmeRs_statistics</span>(result)
 <span class="co"># Fancy knitr table</span>
@@ -355,7 +355,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <th align="right">CTATAGA</th>
 <th align="right">GTACATA</th>
 <th align="right">AACGATT</th>
-<th align="right">score_global</th>
+<th align="right">score_total</th>
 </tr>
 </thead>
 <tbody>
@@ -488,10 +488,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>References</h2>
 <div id="refs" class="references">
 <div id="ref-NEEDLEMAN1970443">
-<p>Needleman, Saul B., and Christian D. Wunsch. 1970. “A General Method Applicable to the Search for Similarities in the Amino Acid Sequence of Two Proteins.” <em>Journal of Molecular Biology</em> 48 (3): 443–53. doi:<a href="https://doi.org/https://doi.org/10.1016/0022-2836(70)90057-4">https://doi.org/10.1016/0022-2836(70)90057-4</a>.</p>
+<p>Needleman, Saul B., and Christian D. Wunsch. 1970. “A General Method Applicable to the Search for Similarities in the Amino Acid Sequence of Two Proteins.” <em>Journal of Molecular Biology</em> 48 (3): 443–53. doi:<a href="https://doi.org/10.1016/0022-2836(70)90057-4">10.1016/0022-2836(70)90057-4</a>.</p>
 </div>
 <div id="ref-SMITH1981195">
-<p>Smith, T.F., and M.S. Waterman. 1981. “Identification of Common Molecular Subsequences.” <em>Journal of Molecular Biology</em> 147 (1): 195–97. doi:<a href="https://doi.org/https://doi.org/10.1016/0022-2836(81)90087-5">https://doi.org/10.1016/0022-2836(81)90087-5</a>.</p>
+<p>Smith, T.F., and M.S. Waterman. 1981. “Identification of Common Molecular Subsequences.” <em>Journal of Molecular Biology</em> 147 (1): 195–97. doi:<a href="https://doi.org/10.1016/0022-2836(81)90087-5">10.1016/0022-2836(81)90087-5</a>.</p>
 </div>
 </div>
 </div>

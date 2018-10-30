@@ -26,7 +26,7 @@
   # -- 1st -- Calculate the stats for rows and add columns for min, max, mean etc.
 
       # Ignore score column if exists
-      score_column_exists <- which(colnames(kmeRs_similarity_matrix) == 'score_global')
+      score_column_exists <- which(colnames(kmeRs_similarity_matrix) == 'score_total')
 
         if (score_column_exists > 0){
 
