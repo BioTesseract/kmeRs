@@ -1,5 +1,5 @@
 # Introduction to the kmeRs package
-*Rafal Urniaz, PhD*^[1]
+*Rafal Urniaz, PhD* <sub>1<sub>
 
 Introduction
 ------------
