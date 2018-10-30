@@ -16,3 +16,10 @@ sorted similarity matrix with global.score column added; is returned as a data.f
 The \code{kmeRs_score_and_sort} function sums the partial scores and sort the data.frame
 to indicate the most 'different' k-mers
 }
+\examples{
+# Calculate the example BLOSUM62 matrix and score the result
+
+example <- kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+kmeRs_score_and_sort(example)
+
+}

@@ -20,3 +20,9 @@ alignment is returned as a data.frame
 \description{
 The \code{kmeRs_show_alignment} function aligns and shows calculated alignment between two DNA or RNA sequences
 }
+\examples{
+# Example alignment
+
+kmeRs_show_alignment( kmer_A = "AAATTTCCCGGG", kmer_B = "TCACCC" ,submat = "BLOSUM62")
+
+}

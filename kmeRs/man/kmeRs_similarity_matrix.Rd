@@ -38,3 +38,9 @@ PAM or BLOSUM, respectively. The results are evaluated by global similarity scor
 higher similarity score indicates more similar sequences for BLOSUM and opposite for
 PAM matrix.
 }
+\examples{
+# Display BLOSUM matrix used for calculation
+
+kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+
+}

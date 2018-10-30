@@ -15,3 +15,9 @@ vector contains complementary sequences
 \description{
 The \code{kmeRs_transcript_to_complementary} function transcripts DNA given k-mers to complementary sequences
 }
+\examples{
+# Returns complementary sequence to GATTACA
+
+kmeRs_transcript_to_complementary('GATTACA')
+
+}

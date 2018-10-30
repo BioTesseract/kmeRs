@@ -13,26 +13,35 @@
 #'
 #' @return data.frame with results
 #'
+#' @examples
+#' # Simple BLOSUM62 similarity matrix for DNA nucleotides
+#' example  <- kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+#'
+#' # Result as a full matrix
+#' kmeRs_statistics(example)
+#'
+#' # Result a summary statistics table
+#' kmeRs_statistics(example, summary_statistics_only = TRUE)
+#'
 #' @export
 
 
   kmeRs_statistics <- function(kmeRs_similarity_matrix, summary_statistics_only = FALSE){
 
-    kmeRs_similarity_matrix_temp <- kmeRs_similarity_matrix
-
-    col.count <- length(kmeRs_similarity_matrix[ , 1]) + 1
-    row.count <- length(kmeRs_similarity_matrix[ 1, ]) + 1
-
-  # -- 1st -- Calculate the stats for rows and add columns for min, max, mean etc.
+      kmeRs_similarity_matrix_temp <- kmeRs_similarity_matrix
 
       # Ignore score column if exists
-      score_column_exists <- which(colnames(kmeRs_similarity_matrix) == 'score_total')
 
-        if (score_column_exists > 0){
+      score_column_number <- -1
 
-          kmeRs_similarity_matrix_temp <- kmeRs_similarity_matrix[ , - score_column_exists]
+      if ('score_total' %in% colnames(kmeRs_similarity_matrix_temp)){
 
-        }
+        score_column_number <- which(colnames(kmeRs_similarity_matrix) == 'score_total')
+        kmeRs_similarity_matrix_temp <- kmeRs_similarity_matrix[ , - score_column_number]
+
+      }
+
+      # Calculate the stats for rows and add columns for min, max, mean etc.
 
       Min  <- apply(kmeRs_similarity_matrix_temp, 1, min)
       Max  <- apply(kmeRs_similarity_matrix_temp, 1, max)
@@ -41,7 +50,7 @@
 
       kmeRs_similarity_matrix <- cbind(kmeRs_similarity_matrix, data.frame(Min, Max, Mean, Sd))
 
-  # -- 2nd -- Calculate the stats for cols and add rows for min, max, mean etc.
+      # Calculate the stats for cols and add rows for min, max, mean etc.
 
       Min  <- apply(kmeRs_similarity_matrix, 2, min)
       Max  <- apply(kmeRs_similarity_matrix, 2, max)
@@ -51,11 +60,18 @@
       kmeRs_similarity_matrix <- rbind(kmeRs_similarity_matrix, t(data.frame(Min, Max, Mean, Sd)))
       kmeRs_similarity_matrix <- round(kmeRs_similarity_matrix, 2)
 
-  # -- 3rd -- Add results to matrix or prepare a summary table
+      # Add results to matrix or prepare a summary table
 
       if (summary_statistics_only == TRUE){
 
-        kmeRs_similarity_matrix <- kmeRs_similarity_matrix[row.count:length(kmeRs_similarity_matrix[1, ])-1, col.count:length(kmeRs_similarity_matrix[ ,1])]
+        # start table from score or Min column and Min row
+
+        col <- which(colnames(kmeRs_similarity_matrix) == 'Min')
+        if (score_column_number > 0){ col <- score_column_number }
+
+        row <- which(rownames(kmeRs_similarity_matrix) == 'Min')
+
+        kmeRs_similarity_matrix <- kmeRs_similarity_matrix[ row:length(rownames(kmeRs_similarity_matrix)), col:length(colnames(kmeRs_similarity_matrix))]
 
       }
 

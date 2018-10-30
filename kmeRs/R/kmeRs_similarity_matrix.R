@@ -25,6 +25,11 @@
 #'
 #' @return similarity matrix is returned as a data.frame
 #'
+#' @examples
+#' # Display BLOSUM matrix used for calculation
+#'
+#' kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+#'
 #' @importFrom rDNAse twoSeqSim
 #' @importFrom utils write.csv2
 #' @importFrom tcR generate.kmers

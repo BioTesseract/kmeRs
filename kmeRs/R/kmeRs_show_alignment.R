@@ -12,6 +12,11 @@
 #'
 #' @return alignment is returned as a data.frame
 #'
+#' @examples
+#' # Example alignment
+#'
+#' kmeRs_show_alignment( kmer_A = "AAATTTCCCGGG", kmer_B = "TCACCC" ,submat = "BLOSUM62")
+#'
 #' @export
 
 

@@ -8,6 +8,11 @@
 #'
 #' @return example report
 #'
+#' @examples
+#' # Test package - example raport
+#'
+#' kmeRs_test_package()
+#'
 #' @export
 
 

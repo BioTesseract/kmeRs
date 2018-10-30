@@ -9,6 +9,11 @@
 #'
 #' @return vector contains complementary sequences
 #'
+#' @examples
+#' # Returns complementary sequence to GATTACA
+#'
+#' kmeRs_transcript_to_complementary('GATTACA')
+#'
 #' @export
 
 

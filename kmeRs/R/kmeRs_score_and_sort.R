@@ -10,6 +10,12 @@
 #'
 #' @return sorted similarity matrix with global.score column added; is returned as a data.frame
 #'
+#' @examples
+#' # Calculate the example BLOSUM62 matrix and score the result
+#'
+#' example <- kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+#' kmeRs_score_and_sort(example)
+#'
 #' @export
 
 

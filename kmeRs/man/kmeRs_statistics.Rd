@@ -21,3 +21,14 @@ The \code{kmeRs_statistics} function calculates basic statistics and returns the
 with calculated results or summarized table with statistics only when summary_statistics_only
 is set to TRUE
 }
+\examples{
+# Simple BLOSUM62 similarity matrix for DNA nucleotides
+example  <- kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+
+# Result as a full matrix
+kmeRs_statistics(example)
+
+# Result a summary statistics table
+kmeRs_statistics(example, summary_statistics_only = TRUE)
+
+}

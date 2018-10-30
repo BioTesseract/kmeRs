@@ -13,3 +13,9 @@ example report
 The \code{kmeRs_test_package} function calculates and shows an example report of
 the kmeRs package for sample given k-mers: "ATA", "CGC", "TGC", "GGA"
 }
+\examples{
+# Test package - example raport
+
+kmeRs_test_package()
+
+}
