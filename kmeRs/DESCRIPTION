@@ -2,13 +2,13 @@ Package: kmeRs
 Title: K-Mers Similarity Score Matrix
 Version: 1.1.0
 Authors@R: person("Rafal", "Urniaz", email = "rafal.urniaz@gmail.com", role = c("aut", "cre"))
-Description: The package contains tools to calculate similarity score matrix for DNA k-mers. 
-             The pairwise similarity score is calculated using PAM or BLOSUM substitution 
-             matrix. The results are evaluated by similarity score calculated by Needleman-Wunsch
-             (global) [@NEEDLEMAN1970443] or Smith-Waterman (local) alignment. [@SMITH1981195]. 
-             Higher similarity score indicates more similar sequences for BLOSUM and less similar 
-             sequences for PAM matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix 
-             versions are available for PAM and BLOSUM, respectively. 
+Description:Contains tools to calculate similarity score matrix for DNA k-mers. 
+            The pairwise similarity score is calculated using PAM or BLOSUM substitution 
+            matrix. The results are evaluated by similarity score calculated by Needleman-Wunsch
+            (global) or Smith-Waterman (local) alignment. Higher similarity score indicates 
+			more similar sequences for BLOSUM and less similar sequences for PAM matrix; 
+			30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available
+			for PAM and BLOSUM, respectively. 
 Depends: R (>= 3.4.0)
 License: GPL-3
 Encoding: UTF-8
