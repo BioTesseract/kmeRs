@@ -12,7 +12,7 @@ Description: Contains tools to calculate DNA similarity score matrix for k lengt
 Depends: R (>= 3.4.0)
 License: GPL-3
 Encoding: UTF-8
-URL: http://github.com/RafalUrniaz/kmeRs
+URL: https://rafalurniaz.github.io/kmeRs/
 BugReports: http://github.com/RafalUrniaz/kmeRs/issues
 LazyData: true
 biocViews: Software
