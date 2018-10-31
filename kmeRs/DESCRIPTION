@@ -10,13 +10,7 @@ URL: https://rafalurniaz.github.io/kmeRs/
 BugReports: http://github.com/RafalUrniaz/kmeRs/issues
 LazyData: true
 biocViews: Software
-Imports: tcR,
-    rDNAse,
-    utils,
-    stats,
-    Biostrings
+Imports: tcR, rDNAse, utils, stats, Biostrings
 RoxygenNote: 6.1.0
-Suggests: knitr,
-    ape (>= 4.0),
-    rmarkdown
+Suggests: knitr, ape (>= 4.0), rmarkdown
 VignetteBuilder: knitr
