@@ -36,7 +36,9 @@ kmeRs/*.Rproj
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
-# Word docs and other not to sync
+# Word docs
 *.docx
 paper/*
+
+#other not to sync
 development_ideas/*
