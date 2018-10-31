@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2aec9104ea624772bbf80e22fe28e380)](https://app.codacy.com/app/RafalUrniaz/kmeRs?utm_source=github.com&utm_medium=referral&utm_content=RafalUrniaz/kmeRs&utm_campaign=Badge_Grade_Dashboard)
 ![](https://img.shields.io/badge/%20bioc__check-true-green.svg) [![Build Status](https://travis-ci.com/RafalUrniaz/kmeRs.svg?branch=master)](https://travis-ci.com/RafalUrniaz/kmeRs) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/devtools)](https://cran.r-project.org/package=devtools)
 
 # kmeRs: K-Mers Similarity Score Matrix
