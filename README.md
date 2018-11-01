@@ -19,6 +19,7 @@ The documentation like manual or tutorials can be found in [documentation](/docu
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
+
 # To show the manual and functions examples
 help(package = "kmeRs")
 ```
