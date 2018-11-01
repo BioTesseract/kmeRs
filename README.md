@@ -15,7 +15,7 @@ install.packages("")
 devtools::install_github("rafalurniaz/kmeRs/kmeRs/")
 ```
 ## Documentation and tutorials 
-
+The documentation like manual or tutorials can be found in [documentation](/documentation/) folder to this repository
 ```r
 
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
