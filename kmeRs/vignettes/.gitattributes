@@ -1,6 +1,5 @@
 # Basic .gitattributes for a R repo.
 
-/*.html linguist-vendored
 *.html linguist-vendored
 
 # Source files
