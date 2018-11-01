@@ -14,6 +14,12 @@ install.packages("")
 # install.packages("devtools")
 devtools::install_github("rafalurniaz/kmeRs/kmeRs/")
 ```
+## Documentation and tutorials 
+
+```r
+
+vignette("Introduction_to_kmeRs_package", package="kmeRs")
+```
 ## Quick demo 
 
 ```r
