@@ -1,7 +1,6 @@
-# kmeRs 1.1.0
+# kmeRs 1.1.0 - Published on CRAN 
 
-- Submitted to CRAN
-
+- ~~Submitted to CRAN~~
 - Main package functions - added and tested:
 
 * `kmeRs_similarity_matrix()`
