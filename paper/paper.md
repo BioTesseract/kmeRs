@@ -2,7 +2,7 @@
 title: 'kmeRs: K-Mers Similarity Score Matrix'
 authors:
 - affiliation: '1'
-  name: Rafal Urniaz, PhD
+  name: Rafal Urniaz
   orcid: 0000-0003-0192-2165
 date: "23 August 2019"
 output: pdf_document
