@@ -32,10 +32,19 @@ help(package = "kmeRs")
 ```r
 kmeRs::kmeRs_test_package()
 ```
-
+ ## Dependences
+ 
 Depends: R (>= 3.4.0) <br/>
-Imports: tcR, rDNAse, utils, stats, Biostrings <br/>
+Imports: tcR, rDNAse, utils, stats, Biostrings<br/>
 Encoding: UTF-8<br/> 
+
+Biostrings needs to be installed first from Bioconductor repository, as below:
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("Biostrings")
+```
 
 References
 ----------
