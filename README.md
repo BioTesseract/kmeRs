@@ -10,6 +10,15 @@ TBA
 
 ## Installation
 
+**Biostrings** needs to be installed first,
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("Biostrings")
+```
+then:
+
 ```r
 # Install from CRAN
 install.packages("kmeRs")
@@ -17,13 +26,6 @@ install.packages("kmeRs")
 # Or the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("rafalurniaz/kmeRs/kmeRs/")
-```
-**Biostrings** needs to be installed first from Bioconductor repository, as below:
-```r
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("Biostrings")
 ```
 
 ## Documentation and tutorials 
