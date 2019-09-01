@@ -17,7 +17,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 
 BiocManager::install("Biostrings")
 ```
-then:
+**then:**
 
 ```r
 # Install from CRAN
