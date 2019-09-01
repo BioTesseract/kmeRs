@@ -18,6 +18,14 @@ install.packages("kmeRs")
 # install.packages("devtools")
 devtools::install_github("rafalurniaz/kmeRs/kmeRs/")
 ```
+**Biostrings** needs to be installed first from Bioconductor repository, as below:
+```r
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("Biostrings")
+```
+
 ## Documentation and tutorials 
 The documentation like manual or tutorials can be found in [documentation](/documentation/) folder to this repository or  directly from installed package by commands:
 ```r
@@ -37,14 +45,6 @@ kmeRs::kmeRs_test_package()
 Depends: R (>= 3.4.0) <br/>
 Imports: tcR, rDNAse, utils, stats, Biostrings<br/>
 Encoding: UTF-8<br/> 
-
-Biostrings needs to be installed first from Bioconductor repository, as below:
-```r
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-
-BiocManager::install("Biostrings")
-```
 
 References
 ----------
