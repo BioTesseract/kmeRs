@@ -14,7 +14,7 @@ tags:
 - R package
 affiliations:
 - index: 1
-  name: BioTesseract Ltd. Cambridge R&D, Cambridge Biomedical Campus, Cambridge, UK
+  name: BioTesseract Ltd. R&D Cambridge, Cambridge Biomedical Campus, Cambridge, UK
 ---
 
 # Introduction 
