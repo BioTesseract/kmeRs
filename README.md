@@ -15,7 +15,9 @@ TBA
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
-BiocManager::install("Biostrings", "pwalign", "BiocGenerics")
+BiocManager::install("Biostrings")
+BiocManager::install("pwalign")
+BiocManager::install("BiocGenerics")
 ```
 **then:**
 
