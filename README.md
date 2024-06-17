@@ -1,4 +1,4 @@
-This repository is currently being updated! Please be aware that some commands or descriptions may not be updated yet! 
+This repository is currently being updated! Please be aware some commands or descriptions may not be updated yet! 
 
 The issues are open to track ideas and bugs. The newest version is under CRAN review. 
 
