@@ -1,3 +1,8 @@
+This repository is currently being updated! Please be aware that some commands or descriptions may not be updated yet! 
+
+The issues are open to track ideas and bugs. The newest version is under CRAN review. 
+
+
 ![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg) [![Build Status](https://travis-ci.com/RafalUrniaz/kmeRs.svg?branch=master)](https://travis-ci.com/OncoCDx/kmeRs) [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html) [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/kmeRs)](https://cran.r-project.org/package=kmeRs) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/373b82ef47824c96a0e138afd8e59a02)](https://www.codacy.com/app/RafalUrniaz/kmeRs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RafalUrniaz/kmeRs&amp;utm_campaign=Badge_Grade)
 
 # kmeRs: K-Mers Similarity Score Matrix
