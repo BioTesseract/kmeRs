@@ -2,21 +2,35 @@
 % Please edit documentation in R/kmeRs_heatmap.R
 \name{kmeRs_heatmap}
 \alias{kmeRs_heatmap}
-\title{Generate a k-mer similarity score heatmap}
+\title{K-mer similarity score heatmap}
 \usage{
-kmeRs_heatmap(x, cexRow = NULL, cexCol = NULL, col = NULL)
+kmeRs_heatmap(
+  x,
+  cexRow = NULL,
+  cexCol = NULL,
+  col = NULL,
+  Colv = NA,
+  Rowv = NA
+)
 }
 \arguments{
-\item{kmeRs_similarity_matrix}{matrix calculated by \code{kmeRs_similarity_matrix} function}
+\item{x}{matrix calculated by \code{kmeRs_similarity_matrix} function}
 
-\item{summary_statistics_only}{when parameter is set to TRUE only the summarized table with
-statistics is returned}
+\item{cexRow}{= NULL}
+
+\item{cexCol}{= NULL}
+
+\item{col}{color palette, when NULL the default palette is applied}
+
+\item{Colv}{when different from NA, the column dendrogram is shown}
+
+\item{Rowv}{when different from NA, the row dendrogram is shown}
 }
 \value{
-data.frame with results
+heatmap from results
 }
 \description{
-The \code{kmeRs_heatmap} function makes a heatmap (placeholder ATM)
+The \code{kmeRs_heatmap} function generates a heatmap from similarity score matrix
 }
 \examples{
 # Use RColorBrewer to generate a figure similar to publication

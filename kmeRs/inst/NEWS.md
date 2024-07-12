@@ -1,14 +1,20 @@
 # kmeRs 2.1.0 
 
-- Errors fixed (added, tested, submitted, and published): 
+- Errors fixed
 
 * errors when loading package
 * update to BiocGenerics, pwalign 
-* drop depreciated dependences 
+* droped depreciated dependences  
 
-- New functions (added, tested, submitted, and published): 
+- New functionalities
 
-* update score alignment function
+* rewrote score alignment function
+* rewrote heatmap function, drop dendrogram, add legend
+
+- Documentation
+
+* updated and rewrote descriptions and tutorials
+
 
 # kmeRs 2.0.0 
 
@@ -16,14 +22,14 @@
 
 * faster package loading time
 
-- New functions (added, tested, submitted, and published): 
+- New functionalities
 
 * support for amino acids k-mers  
 * similarity score heatmap 
 
 # kmeRs 1.1.0 
 
-- Main package functions (added, tested, submitted, and published): 
+- Main package functionality 
 
 * `kmeRs_similarity_matrix()`
 * `kmeRs_score_and_sort()`

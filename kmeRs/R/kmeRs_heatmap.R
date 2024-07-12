@@ -1,15 +1,18 @@
-#' @title Generate a k-mer similarity score heatmap
+#' @title K-mer similarity score heatmap
 #'
 #' @description
-#' The \code{kmeRs_heatmap} function makes a heatmap (placeholder ATM)
+#' The \code{kmeRs_heatmap} function generates a heatmap from similarity score matrix
 #'
 #' @aliases kmeRs_heatmap
 #'
-#' @param kmeRs_similarity_matrix matrix calculated by \code{kmeRs_similarity_matrix} function
-#' @param summary_statistics_only when parameter is set to TRUE only the summarized table with
-#' statistics is returned
-#'
-#' @return data.frame with results
+#' @param x matrix calculated by \code{kmeRs_similarity_matrix} function
+#' @param cexRow = NULL
+#' @param cexCol = NULL
+#' @param col color palette, when NULL the default palette is applied   
+#' @param Colv when different from NA, the column dendrogram is shown
+#' @param Rowv when different from NA, the row dendrogram is shown 
+#' 
+#' @return heatmap from results
 #'
 #' @examples
 #' # Use RColorBrewer to generate a figure similar to publication
@@ -20,7 +23,7 @@
 #' kmeRs_heatmap(kmeRs_score(example), col = h.palette)
 #'
 #' @export
-kmeRs_heatmap <- function(x, cexRow = NULL, cexCol = NULL, col = NULL) {
+kmeRs_heatmap <- function(x, cexRow = NULL, cexCol = NULL, col = NULL, Colv=NA, Rowv=NA) {
 	x.exclude <- c("Min", "Max", "Mean", "SD")
 	x <- x[!(rownames(x) %in% x.exclude),]
 	x <- x[,(!colnames(x) %in% x.exclude)]
@@ -37,6 +40,7 @@ kmeRs_heatmap <- function(x, cexRow = NULL, cexCol = NULL, col = NULL) {
 	if (is.null(col)) {
 		col <- colorRampPalette(c("blue4", "aquamarine3", "chartreuse3"))(256)
 	}
-	heatmap(as.matrix(x), scale = "none", col = col, 
-		cexRow = cexRow, cexCol = cexCol)
+	heatmap(as.matrix(x), scale = "none", col = col, cexRow = cexRow, cexCol = cexCol, Colv=Colv, Rowv=Rowv)
+	# Plot a corresponding legend 
+	legend(x="right", legend=c("min", "max"),fill=c((col)[1], (col)[length(col)]))
 }

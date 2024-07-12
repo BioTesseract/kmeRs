@@ -22,9 +22,9 @@ knitr::opts_chunk$set(
 ```
 ## Introduction
 
-Similarity score matrix for nucleic and amino acids k-mers is available. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch [@NEEDLEMAN1970443] and/or Smith-Waterman  [@SMITH1981195]. 
+Similarity score matrix for nucleic and amino acid k-mers is available. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch [@NEEDLEMAN1970443] and/or Smith-Waterman  [@SMITH1981195]. 
 
-### Import the package first
+### Load the package first
    
 ```{r} 
 # Import the package 
@@ -50,18 +50,18 @@ In this example, the most *'different'* k-mer to "GATTACA" sequence will be indi
 # Given hexamers
   kmers_given <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
 # Matrix calculation 
-  result <- kmeRs_similarity_matrix(kmers_given = c("GATTACA"), compare_to = kmers_given , submat = "BLOSUM62") 
+  kmers_mat <- kmeRs_similarity_matrix(q = c("GATTACA"), x = kmers_given , submat = "BLOSUM62") 
 # Fancy knitr table
-  knitr::kable(result) 
+  knitr::kable(kmers_mat) 
 ```
 
-Now, applying **kmeRs_score_and_sort** function the total score is calculated and the matrix is sorted by decreasing score value. The lowest value (in case of BLOSUM) indicates the most *'different'* sequence from given k-mers, in contrast to the highest value which indicates the most similar one. 
+Now, applying **kmeRs_score** function the total score is calculated and the matrix is sorted by increasing score value. The lowest value (in case of BLOSUM) indicates the most *'different'* sequence from given k-mers, in contrast to the highest value which indicates the most similar one. 
 
 ```{r} 
 # Score and sort the matrix  
-  result <- kmeRs_score_and_sort(result)
+  kmers_res <- kmeRs_score(kmers_mat)
 # Fancy knitr table
-  knitr::kable(result)
+  knitr::kable(kmers_res)
 ```
 
 As can be observed, the most *'different'* sequence to GATTACA is ACAGATT with total score equal to 1 and the most similar to GATTACA sequence is of course GATTACA sequence with the highest score equal to 37. 
@@ -74,11 +74,11 @@ In this example, the most *'different'* k-mer to whole given set of heptamers wi
 # Given hexamers
   kmers_given <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
 # Matrix calculation 
-  result <- kmeRs_similarity_matrix(kmers_given = kmers_given, submat = "BLOSUM62")
+  kmers_mat <- kmeRs_similarity_matrix(q = kmers_given, submat = "BLOSUM62")
 # Score the matrix and sort by decreasing score 
-  result <- kmeRs_score_and_sort(result)
+  kmers_res <- kmeRs_score(kmers_mat)
 # Fancy knitr table
-  knitr::kable(result)
+  knitr::kable(kmers_res)
   
 ```
 
@@ -86,13 +86,28 @@ As can be observed, the most *'different'* sequence to all given heptamers is CT
 
 ### Example 4. How to calculate basic statistics for the matrix?
 
-Applying function **kmeRs_statistics** to the result matrix (here, result matrix from example 3) the basic statistics can be calculated as additional columns. When **summary_statistics_only** is set to TRUE only summary table is returned. It is much more elegant way to present results, especially in case of *'big data'* output.  
+Applying function **kmeRs_statistics** to the result matrix the basic statistics can be calculated as additional rows. When **summary_statistics_only** is set to TRUE only summary table is returned. It is much more elegant way to present results, especially in case of *'big data'* output.  
 
 ```{r}
 # Score the matrix and sort by decreasing score 
-  result <- kmeRs_statistics(result)
+  kmers_stats <- kmeRs_statistics(kmers_res)
 # Fancy knitr table
-  knitr::kable(result[ , 1:(length(result[1, ])-4)])
+  knitr::kable(kmers_stats[ ,1:(dim(kmers_stats)[2] - 4) ])
 ```
+
+### Example 5. How to display a similarity heatmap?
+
+Simply applying function **kmeRs_heatmap** to the result matrix.
+
+```{r}
+# Heatmap without sum column
+  kmeRs_heatmap(kmers_res[, -8])  
+```
+
+
+
+### Acknowledgement
+
+Special thanks to Jason Lin, PhD from Chiba Cancer Center Research Institute, Chiba, Japan for contribution in 2021 as implementing of heatmap function and update deprecated functions. 
 
 ## References

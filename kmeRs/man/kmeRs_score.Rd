@@ -7,7 +7,9 @@
 kmeRs_score(x, decreasing = FALSE)
 }
 \arguments{
-\item{kmeRs_similarity_matrix}{the similarity matrix calculated by \code{kmeRs_similarity_matrix} function}
+\item{x}{the similarity matrix calculated by \code{kmeRs_similarity_matrix} function}
+
+\item{decreasing}{when TRUE, results are sorted decreasing}
 }
 \value{
 sorted similarity matrix with global.score column added; is returned as a data.frame

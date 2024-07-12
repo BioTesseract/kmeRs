@@ -11,11 +11,11 @@
 #' @examples
 #' # Test package - example raport
 #'
-#' kmeRs_test_package()
+#' kmeRs_demo()
 #'
 #' @export
 
-kmeRs_test_package <- function() {
+kmeRs_demo <- function() {
 	# Sample k-mers
 	kmers_given <- c("ATA", "CGC", "TGC", "GGA")
 	
