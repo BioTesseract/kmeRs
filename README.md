@@ -21,12 +21,14 @@ BiocManager::install("Biostrings")
 BiocManager::install("pwalign")
 BiocManager::install("BiocGenerics")
 ```
-**then:**
+**then**
 
 ```r
 # Install from CRAN
 install.packages("kmeRs")
-
+```
+**or**
+```r
 # Or the version from GitHub:
 install.packages("devtools")
 devtools::install_github("urniaz/kmeRs/kmeRs/")
