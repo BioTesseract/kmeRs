@@ -1,4 +1,0 @@
-language: r
-before_install:
-- cd kmeRs
-bioc_check: true
