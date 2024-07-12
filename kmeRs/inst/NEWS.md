@@ -8,7 +8,7 @@
 
 - New functions (added, tested, submitted, and published): 
 
-* update score alignment functions
+* update score alignment function
 
 # kmeRs 2.0.0 
 
