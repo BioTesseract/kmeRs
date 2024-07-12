@@ -1,7 +1,7 @@
 ---
 title: "Introduction to the kmeRs package"
 author:
-- name: Rafal Urniaz, PhD^[BioTesseract Cambridge Bioinformatics Solutions, Cambridgeshire, Cambridge, UK]
+- name: Rafal Urniaz, PhD^[OncoCDx Research Center, London, UK]
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
   # pdf_document
@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 ```
 ## Introduction
 
-The package contains tools to calculate similarity score matrix for DNA k-mers. The pairwise similarity score is calculated using PAM or BLOSUM substitution matrix. The results are evaluated by similarity score calculated by Needleman-Wunsch (global) [@NEEDLEMAN1970443] or Smith-Waterman (local) alignment. [@SMITH1981195]. Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix; 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively.
+Similarity score matrix for nucleic and amino acids k-mers is available. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. Higher similarity score indicates more similar sequences for BLOSUM and less similar sequences for PAM matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch [@NEEDLEMAN1970443] and/or Smith-Waterman  [@SMITH1981195]. 
 
 ### Import the package first
    
@@ -31,13 +31,13 @@ The package contains tools to calculate similarity score matrix for DNA k-mers. 
   library(kmeRs)
 ```
 
-### Example 1. How to display PAM or BLOSUM matrix used for calculation?
+### Example 1. How to display PAM or BLOSUM matrix used for amino acides calculation?
 
-Simply apply the **kmeRs_similarity_matrix** function and mark as an input the vector contains the nucleotides letters for witch the score should be calculated.    
+Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate matrix, here BLOSUM62.  
 
 ```{r} 
-# Simple BLOSUM62 similarity matrix for all DNA nucleotides
-  result <- kmeRs_similarity_matrix(kmers_given = c("A", "T", "C", "G"), submat = "BLOSUM62")
+# Simple BLOSUM62 similarity matrix for all amino acid nucleotides
+  result <- kmeRs_similarity_matrix(submat = "BLOSUM62")
 # Fancy knitr table
   knitr::kable(result)
 ```
