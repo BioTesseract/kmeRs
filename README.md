@@ -32,7 +32,7 @@ devtools::install_github("urniaz/kmeRs/kmeRs/")
 ```
 
 ## Documentation and tutorials 
-The documentation like manual or tutorials can be found in [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from installed package by commands:
+The documentation can be found in [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by commands:
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
