@@ -37,9 +37,9 @@ Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate m
 
 ```{r} 
 # Simple BLOSUM62 similarity matrix for all amino acid nucleotides
-  result <- kmeRs_similarity_matrix(submat = "BLOSUM62")
+  BLOSUM62 <- kmeRs_similarity_matrix(submat = "BLOSUM62")
 # Fancy knitr table
-  knitr::kable(result)
+  knitr::kable(BLOSUM62)
 ```
 
 ### Example 2. How to find the most *'different'* k-mer from the given set of k-mers?
@@ -89,7 +89,7 @@ As can be observed, the most *'different'* sequence to all given heptamers is CT
 Applying function **kmeRs_statistics** to the result matrix the basic statistics can be calculated as additional rows. When **summary_statistics_only** is set to TRUE only summary table is returned. It is much more elegant way to present results, especially in case of *'big data'* output.  
 
 ```{r}
-# Score the matrix and sort by decreasing score 
+# Calculate stats 
   kmers_stats <- kmeRs_statistics(kmers_res)
 # Fancy knitr table
   knitr::kable(kmers_stats[ ,1:(dim(kmers_stats)[2] - 4) ])

@@ -14,6 +14,12 @@ BugReports: https://github.com/urniaz/kmeRs/issues
 LazyData: true
 biocViews: Software
 Imports: utils, stats, Biostrings, BiocGenerics, pwalign
-Suggests: RColorBrewer, knitr, rmarkdown, unittest
+Suggests: 
+    RColorBrewer,
+    knitr,
+    rmarkdown,
+    unittest,
+    testthat (>= 3.0.0)
 RoxygenNote: 7.3.1
 VignetteBuilder: knitr
+Config/testthat/edition: 3
