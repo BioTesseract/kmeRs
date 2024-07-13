@@ -31,7 +31,7 @@ Similarity score matrix for nucleic and amino acid k-mers is available. Similari
   library(kmeRs)
 ```
 
-### Example 1. How to display PAM or BLOSUM matrix used for amino acides calculation?
+### Example 1. How to display BLOSUM matrix used for amino acides calculation?
 
 Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate matrix, here BLOSUM62.  
 
@@ -95,7 +95,7 @@ Applying function **kmeRs_statistics** to the result matrix the basic statistics
   knitr::kable(kmers_stats[ ,1:(dim(kmers_stats)[2] - 4) ])
 ```
 
-### Example 5. How to display a similarity heatmap?
+### Example 5. How to display a similarity matrix as a heatmap?
 
 Simply applying function **kmeRs_heatmap** to the result matrix.
 
