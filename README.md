@@ -8,7 +8,7 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 
 [I. Installation](#iinstallation)
 
-## I.Installation
+## I. Installation
 
 **Bioconductor Packages** need to be installed first,
 ```r
