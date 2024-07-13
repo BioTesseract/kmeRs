@@ -6,18 +6,18 @@ Version 2.1.0 beta is available now!
 
 Comprehensive tool to calculate similarity score matrix for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and/or Smith-Waterman. 
 
-[Installation](#installation)
+[1. Installation](#installation)
 
-[Documentation](#documentation)
-- [Functions](#)
-- [Tutorials](#)
-- [Examples](#)
-    - [How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
-    - sss
+[2. Documentation](#documentation)
+- [2.1 Functions](#)
+- [2.2 Tutorials](#)
+- [2.3 Examples](#)
+    - [2.3.1 How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
+    - [2.3.2 How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
     
-[Tests](#tests)
+[3. Tests](#tests)
 
-[How to cite](#how-to-cite)
+[4. How to cite](#how-to-cite)
 
 ## Installation
 
