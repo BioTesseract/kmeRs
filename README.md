@@ -6,13 +6,9 @@ Version 2.1.0 beta is available now!
 
 Comprehensive tool to calculate similarity score matrix for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and/or Smith-Waterman. 
 
-[Go to Heading section](#Installation)
+[I.Installation](#Installation)
 
-## How to cite
-
-TBA
-
-## Installation
+## I. Installation
 
 **Bioconductor Packages** need to be installed first,
 ```r
@@ -43,4 +39,6 @@ vignette("Introduction_to_kmeRs_package", package="kmeRs")
 help(package = "kmeRs")
 ```
 
+## How to cite
 
+TBA
