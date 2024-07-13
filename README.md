@@ -10,10 +10,11 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 
 [2. Documentation](#documentation)
 - [2.1 Functions](#)
-- [2.2 Tutorials](#)
-- [2.3 Examples](#)
+- [2.2 Examples](#)
     - [2.3.1 How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
     - [2.3.2 How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
+    - 
+- [2.3 Tutorials](#)
     
 [3. Tests](#tests)
 
