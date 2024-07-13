@@ -6,20 +6,20 @@ Version 2.1.0 beta is available now!
 
 Comprehensive tool to calculate similarity score matrix for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and/or Smith-Waterman. 
 
-[I. Installation](#i-installation)
+[Installation](#installation)
 
-[II. Documentation](#ii-documentation)
+[Documentation](#documentation)
 - [Functions](#)
 - [Tutorials](#)
 - [Examples](#)
     - [How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
     - sss
     
-[III.Tests](#iiitests)
+[Tests](#tests)
 
-[IV. How to cite](#iv-how-to-cite)
+[How to cite](#how-to-cite)
 
-## I. Installation
+## Installation
 
 **Bioconductor Packages** need to be installed first,
 ```r
@@ -40,7 +40,7 @@ install.packages("devtools")
 devtools::install_github("urniaz/kmeRs/kmeRs/")
 ```
 
-## II. Documentation
+## Documentation
 ### Functions
 The documentation for package including user guides, package vignettes, descriptions of the functions and other documentation is simply accessible by running command below.
 
@@ -57,8 +57,8 @@ vignette("Introduction_to_kmeRs_package", package="kmeRs")
 ### Examples
 #### How to display PAM or BLOSUM matrix used for amino acides calculation?
 
-## III.Tests
+## Tests
 
-## IV. How to cite
+## How to cite
 
 TBA
