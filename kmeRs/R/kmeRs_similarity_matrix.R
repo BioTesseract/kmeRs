@@ -12,52 +12,36 @@
 #' @aliases kmeRs_similarity_matrix
 #'
 #' @param q query vector with given k-mers
-#' @param x kmers to search the query vector against. If unspecified, code{q} will 
-#' be compared to either other k-mers within code{q} (code{compare.all = FALSE}),
-#' or all possible combinations specified by the parameter code{k}
-#' @param k length of k-mers to calculate the similarity matrix for, defaults to 3;
-#' e.g. for DNA, N = 4^3 = 64 combinations if code{k = 3};
+#' @param x kmers to search the query vector against. If unspecified, \code{q} will 
+#' be compared to either other k-mers within \code{q} (\code{compare.all = FALSE}),
+#' or all possible combinations specified by the parameter \code{k}
+#' @param k length of k-mers to calculate the similarity matrix for, defaults to 3; e.g. for DNA, N = 4^3 = 64 combinations if \code{k = 3};
 #' @param seq.type type of sequence in question, either 'DNA' or 'AA' (default);
-#' this will also modify code{q} accordingly, if code{q} is unspecified.
-#' @param compare.all if code{TRUE}, the query vector will be compared to all
-#' possible combinations of k-mers (defaults to code{FALSE})
-#' @param align.type type of alignment, either code{global} or {local}.
-#' code{global} uses Needleman-Wunsch global alignment to calculate scores, while
-#' code{local} represents Smith-Waterman local alignment instead
+#' this will also modify \code{q} accordingly, if \code{q} is unspecified.
+#' @param compare.all if \code{TRUE}, the query vector will be compared to all
+#' possible combinations of k-mers (defaults to \code{FALSE})
+#' @param align.type type of alignment, either \code{global} or \code{local}.
+#' \code{global} uses Needleman-Wunsch global alignment to calculate scores, while
+#' \code{local} represents Smith-Waterman local alignment instead
 #' @param submat substitution matrix, default to 'BLOSUM62'; other choices are
 #' 'BLOSUM45', 'BLOSUM50', 'BLOSUM62', 'BLOSUM80', 'BLOSUM100', 'PAM30',
 #' 'PAM40', 'PAM70', 'PAM120' or 'PAM250'
 #' @param save_to_file if specified, the results will be saved to the path in
 #' comma-separated format (.CSV)
-#' @param ... other parameters, e.g. gap opening/extension penalties (code{gapOpening},
-#' code{gapExtension}), or DNA match/mismatch scores (code{na.match}, code{na.mismatch})
+#' @param ... other parameters, e.g. gap opening/extension penalties (\code{gapOpening},
+#' \code{gapExtension}), or DNA match/mismatch scores (\code{na.match}, \code{na.mismatch})
 #'
 #' @return similarity matrix is returned as a data.frame
 #'
 #' @examples
-#' # this should return the standard BLOSUM62 matrix
-#' kmeRs_similarity_matrix() 
-#'
-#' # this should return a 4x4 identity matrix for DNA bases
-#' kmeRs_similarity_matrix(seq.type = "DNA", na.match = 1, na.mismatch = 0)
-#'
+#' # Simple BLOSUM62 similarity matrix for all amino acid nucleotides
+#' kmeRs_similarity_matrix(submat = "BLOSUM62")
+#' 
 #' @importFrom utils write.csv2
 #' @importFrom BiocGenerics score
-#'
+#' 
 #' @export
-
-kmeRs_generate_kmers <- function(k, bases) {
-	kmers.list <- ''
-	for (i in 1:k) {
-		kmers.list <- unlist(lapply(kmers.list, function (kmer) {
-			paste0(kmer, bases)
-		}))
-	}
-	return(kmers.list)
-}
-
-#' @export
-
+#' 
 kmeRs_similarity_matrix <- function(q = NULL, x = NULL,
 	align.type = "global", k = 3, seq.type = "AA",
 	submat = ifelse(
@@ -115,5 +99,17 @@ kmeRs_similarity_matrix <- function(q = NULL, x = NULL,
 	return(kmers_dist_matrix)
 }
 
-# source("kmeRs_show_alignment.R")
-# source("kmeRs_similarity_matrix.R")
+#' @title kmeRs generate kmers
+#' @param k times
+#' @param bases follow the kmeRs_similarity_matrix()
+#'
+kmeRs_generate_kmers <- function(k, bases) {
+  kmers.list <- ''
+  for (i in 1:k) {
+    kmers.list <- unlist(lapply(kmers.list, function (kmer) {
+      paste0(kmer, bases)
+    }))
+  }
+  return(kmers.list)
+}
+

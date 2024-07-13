@@ -21,7 +21,10 @@
 #' q0 <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
 #' example <- kmeRs_similarity_matrix(q0, submat = "BLOSUM62")
 #' kmeRs_heatmap(kmeRs_score(example), col = h.palette)
-#'
+#' @importFrom "grDevices" "colorRampPalette"
+#' @importFrom "graphics" "legend"
+#' @importFrom "stats" "heatmap"
+#' 
 #' @export
 kmeRs_heatmap <- function(x, cexRow = NULL, cexCol = NULL, col = NULL, Colv=NA, Rowv=NA) {
 	x.exclude <- c("Min", "Max", "Mean", "SD")

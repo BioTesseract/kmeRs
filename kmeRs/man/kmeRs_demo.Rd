@@ -2,7 +2,6 @@
 % Please edit documentation in R/kmeRs_demo.R
 \name{kmeRs_demo}
 \alias{kmeRs_demo}
-\alias{kmeRs_test_package}
 \title{Simple Demo For KmeRs Package}
 \usage{
 kmeRs_demo()
@@ -11,7 +10,7 @@ kmeRs_demo()
 example report
 }
 \description{
-The \code{kmeRs_test_package} function calculates and shows an example report of
+The \code{kmeRs_demo} function calculates and shows an example report of
 the kmeRs package for sample given k-mers: "ATA", "CGC", "TGC", "GGA"
 }
 \examples{

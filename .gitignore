@@ -41,3 +41,4 @@ paper/*
 
 #other not to sync
 development_ideas/*
+/doc/

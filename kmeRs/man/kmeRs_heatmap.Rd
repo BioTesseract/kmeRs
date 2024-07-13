@@ -39,5 +39,4 @@ h.palette <- rev(brewer.pal(9, "YlGnBu"))
 q0 <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
 example <- kmeRs_similarity_matrix(q0, submat = "BLOSUM62")
 kmeRs_heatmap(kmeRs_score(example), col = h.palette)
-
 }

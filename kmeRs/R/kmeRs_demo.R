@@ -1,10 +1,10 @@
 #' @title Simple Demo For KmeRs Package
 #'
 #' @description
-#' The \code{kmeRs_test_package} function calculates and shows an example report of
+#' The \code{kmeRs_demo} function calculates and shows an example report of
 #' the kmeRs package for sample given k-mers: "ATA", "CGC", "TGC", "GGA"
 #'
-#' @aliases kmeRs_test_package
+#' @aliases kmeRs_demo
 #'
 #' @return example report
 #'

@@ -7,9 +7,9 @@
 kmeRs_statistics(x, margin.only = FALSE, digits = 2)
 }
 \arguments{
-\item{x}{Similarity matrix computed by code{kmeRs_similarity_matrix}}
+\item{x}{Similarity matrix computed by \code{kmeRs_similarity_matrix}}
 
-\item{margin.only}{Should only margin statistics be displayed? Defaults to code{FALSE}}
+\item{margin.only}{Should only margin statistics be displayed? Defaults to \code{FALSE}}
 
 \item{digits}{rounding digits, defaults to 2}
 }

@@ -12,7 +12,7 @@ TBA
 
 ## Installation
 
-**Biostrings** needs to be installed first,
+**Bioconductor Packages** need to be installed first,
 ```r
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
@@ -21,15 +21,12 @@ BiocManager::install("Biostrings")
 BiocManager::install("pwalign")
 BiocManager::install("BiocGenerics")
 ```
-**then**
-
+**then install from CRAN**
 ```r
-# Install from CRAN
 install.packages("kmeRs")
 ```
-**or**
+**or development version from GitHub**
 ```r
-# Or the version from GitHub:
 install.packages("devtools")
 devtools::install_github("urniaz/kmeRs/kmeRs/")
 ```

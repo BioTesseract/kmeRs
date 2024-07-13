@@ -7,8 +7,8 @@
 #'
 #' @aliases kmeRs_statistics
 #'
-#' @param x Similarity matrix computed by code{kmeRs_similarity_matrix}
-#' @param margin.only Should only margin statistics be displayed? Defaults to code{FALSE}
+#' @param x Similarity matrix computed by \code{kmeRs_similarity_matrix}
+#' @param margin.only Should only margin statistics be displayed? Defaults to \code{FALSE}
 #' @param digits rounding digits, defaults to 2
 #'
 #' @return data.frame with results
