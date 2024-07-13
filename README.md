@@ -12,8 +12,11 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 - [2.1 Functions](#)
 - [2.2 Examples](#)
     - [2.3.1 How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
-    - [2.3.2 How to display PAM or BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
-    - 
+    - [2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?](#)
+    - [2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers? ](#)
+    - [2.3.4 ](#)
+    - [2.3.5 ](#)
+    - [2.3.6 ](#)
 - [2.3 Tutorials](#)
     
 [3. Tests](#tests)
