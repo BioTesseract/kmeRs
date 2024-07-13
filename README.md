@@ -11,7 +11,7 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 [II. Documentation and tutorials](#ii-documentation-and-tutorials)
 - [General](#ii-documentation-and-tutorials)
     
-[III.Tests](#ii-documentation-and-tutorials)
+[III.Tests](#iiitests)
 
 [IV. How to cite](#ii-documentation-and-tutorials)
 
