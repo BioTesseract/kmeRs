@@ -9,7 +9,8 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 [I. Installation](#i-installation)
 
 [II. Documentation](#ii-documentation)
-- [General](#)
+- [II.I Functions](#)
+- [II.I Functions](#)
     
 [III.Tests](#iiitests)
 
@@ -37,13 +38,15 @@ devtools::install_github("urniaz/kmeRs/kmeRs/")
 ```
 
 ## II. Documentation
+### Functions
 The documentation for package including user guides, package vignettes, descriptions of the functions and other documentation is simply accessible by running command below.
+
 ```r
 # To show the manual and functions' descriptions 
 help(package = "kmeRs")
 ```
-
-[/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by commands:
+### Tutorials and examples
+Package vignettes [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by commands:
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
