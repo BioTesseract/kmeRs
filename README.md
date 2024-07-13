@@ -10,8 +10,9 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 
 [II. Documentation](#ii-documentation)
 - [Functions](#)
-- [Tutorials and examples](#)
-    - sss
+- [Tutorials](#)
+- [Examples](#)
+    - How to display PAM or BLOSUM matrix used for amino acides calculation?
     - sss
     
 [III.Tests](#iiitests)
@@ -52,9 +53,9 @@ Package vignettes [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repositor
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
-
-
 ```
+### Examples
+#### How to display PAM or BLOSUM matrix used for amino acides calculation?
 
 ## III.Tests
 
