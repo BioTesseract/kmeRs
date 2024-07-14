@@ -49,6 +49,7 @@ install.packages("devtools")
 devtools::install_github("urniaz/kmeRs/kmeRs/")
 ```
 
+
 ## 2. Documentation
 
 ### 2.1 Functions
@@ -62,6 +63,17 @@ help(package = "kmeRs")
 ### 2.2 Examples
 
 #### 2.3.1 How to display BLOSUM matrix used for amino acides calculation?
+
+Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate matrix, here BLOSUM62.  
+
+```{r} 
+# Simple BLOSUM62 similarity matrix for all amino acid nucleotides
+  BLOSUM62 <- kmeRs_similarity_matrix(submat = "BLOSUM62")
+# Fancy knitr table
+  knitr::kable(BLOSUM62)
+```
+
+
 
 #### 2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?
 
@@ -81,15 +93,18 @@ Package vignettes are avaliable in [/kmeRs/vignettes/](/kmeRs/vignettes/) folder
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
 ```
 
+
 ## 3. Tests
 
 Test are implemented as continuous integration by CircleCI. Continuous integration is a DevOps software development practice where code changes are regularly merge into a central repository, after which automated builds and tests are run.
 
 The source of tests covering the code of the package are available in [/kmeRs/tests/](/kmeRs/tests/) folder of the repository.
 
+
 ## 4. How to cite
 
 TBA
+
 
 ## 5. Acknowledgement
 
