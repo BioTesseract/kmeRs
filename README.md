@@ -66,7 +66,7 @@ help(package = "kmeRs")
 
 Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate matrix, here BLOSUM62.  
 
-```{r} 
+```r
 # Simple BLOSUM62 similarity matrix for all amino acid nucleotides
   BLOSUM62 <- kmeRs_similarity_matrix(submat = "BLOSUM62")
 # Fancy knitr table
