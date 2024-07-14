@@ -7,6 +7,7 @@ Version 2.1.0 beta is available now! Construction works are ongoing! :D
 
 Comprehensive tool to calculate and heatmap similarity score matrix for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and/or Smith-Waterman. 
 
+
 [1. Installation](#1-installation)
 
 [2. Documentation](#2-documentation)
@@ -17,13 +18,15 @@ Comprehensive tool to calculate and heatmap similarity score matrix for nucleic 
     - [2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers? ](#233-how-to-find-the-most-different-k-mer-to-whole-given-set-of-k-mers)
     - [2.3.4 How to calculate basic statistics for the matrix?](#234-how-to-calculate-basic-statistics-for-the-matrix)
     - [2.3.5 How to display a similarity matrix as a heatmap?](#235-how-to-display-a-similarity-matrix-as-a-heatmap)
-- [2.3 Tutorials](##23-tutorials)
+- [2.3 Tutorials](#23-tutorials)
     
-[3. Tests](#tests)
+[3. Tests](#3-tests)
 
-[4. How to cite](#how-to-cite)
+[4. How to cite](#4-how-to-cite)
 
-[5. Acknowledgement](#how-to-cite)
+[5. Acknowledgement](#5-acknowledgement)
+
+
 
 ## 1. Installation
 
