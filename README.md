@@ -70,7 +70,9 @@ help(package = "kmeRs")
 
 
 ### 2.3 Tutorials
-Package vignettes [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by commands:
+
+Package vignettes are avaliable in [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by command:
+
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
