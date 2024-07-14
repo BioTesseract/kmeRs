@@ -651,10 +651,10 @@ k-mers, in contrast to the highest value which indicates the most
 similar one.
 
 ```r
-    # Score and sort the matrix  
-      kmers_res <- kmeRs_score(kmers_mat)
-    # Fancy knitr table
-      knitr::kable(kmers_res)
+# Score and sort the matrix  
+  kmers_res <- kmeRs_score(kmers_mat)
+# Fancy knitr table
+  knitr::kable(kmers_res)
 ```
 
 
@@ -714,9 +714,314 @@ sequence is of course GATTACA sequence with the highest score equal to
 
 #### 2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers?
 
+
+
+In this example, the most *‘different’* k-mer to whole given set of
+heptamers will be indicated. The same heptamers as in example 2 are
+used.
+
+```r
+# Given hexamers
+  kmers_given <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
+# Matrix calculation 
+  kmers_mat <- kmeRs_similarity_matrix(q = kmers_given, submat = "BLOSUM62")
+# Score the matrix and sort by decreasing score 
+  kmers_res <- kmeRs_score(kmers_mat)
+# Fancy knitr table
+  knitr::kable(kmers_res)
+```
+
+
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">GATTACA</th>
+<th style="text-align: right;">ACAGATT</th>
+<th style="text-align: right;">GAATTAC</th>
+<th style="text-align: right;">GAAATCT</th>
+<th style="text-align: right;">CTATAGA</th>
+<th style="text-align: right;">GTACATA</th>
+<th style="text-align: right;">AACGATT</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CTATAGA</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">62</td>
+</tr>
+<tr>
+<td style="text-align: left;">AACGATT</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td style="text-align: left;">ACAGATT</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">83</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAATTAC</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">87</td>
+</tr>
+<tr>
+<td style="text-align: left;">GTACATA</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">93</td>
+</tr>
+<tr>
+<td style="text-align: left;">GATTACA</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAAATCT</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">97</td>
+</tr>
+</tbody>
+</table>
+
+As can be observed, the most *‘different’* sequence to all given
+heptamers is CTATAGA with score equal to 62 and the most similar
+sequence is GAAATCT with the highest score equal to 97.
+
+
 #### 2.3.4 How to calculate basic statistics for the matrix?
 
+
+Applying function **kmeRs\_statistics** to the result matrix the basic
+statistics can be calculated as additional rows. When
+**summary\_statistics\_only** is set to TRUE only summary table is
+returned. It is much more elegant way to present results, especially in
+case of *‘big data’* output.
+
+```r
+# Calculate stats 
+  kmers_stats <- kmeRs_statistics(kmers_res)
+# Fancy knitr table
+  knitr::kable(kmers_stats[ ,1:(dim(kmers_stats)[2] - 4) ])
+```
+
+
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">GATTACA</th>
+<th style="text-align: right;">ACAGATT</th>
+<th style="text-align: right;">GAATTAC</th>
+<th style="text-align: right;">GAAATCT</th>
+<th style="text-align: right;">CTATAGA</th>
+<th style="text-align: right;">GTACATA</th>
+<th style="text-align: right;">AACGATT</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">CTATAGA</td>
+<td style="text-align: right;">7.00</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">-2.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">11.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">62.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">AACGATT</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">24.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">80.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">ACAGATT</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">24.00</td>
+<td style="text-align: right;">83.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAATTAC</td>
+<td style="text-align: right;">15.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">18.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">87.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">GTACATA</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">11.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">93.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">GATTACA</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">15.00</td>
+<td style="text-align: right;">19.00</td>
+<td style="text-align: right;">7.00</td>
+<td style="text-align: right;">12.00</td>
+<td style="text-align: right;">4.00</td>
+<td style="text-align: right;">95.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAAATCT</td>
+<td style="text-align: right;">19.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">18.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">-2.00</td>
+<td style="text-align: right;">9.00</td>
+<td style="text-align: right;">8.00</td>
+<td style="text-align: right;">97.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Min</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">-2.00</td>
+<td style="text-align: right;">-2.00</td>
+<td style="text-align: right;">6.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">62.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Max</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">37.00</td>
+<td style="text-align: right;">97.00</td>
+</tr>
+<tr>
+<td style="text-align: left;">Mean</td>
+<td style="text-align: right;">13.57</td>
+<td style="text-align: right;">11.86</td>
+<td style="text-align: right;">12.43</td>
+<td style="text-align: right;">13.86</td>
+<td style="text-align: right;">8.86</td>
+<td style="text-align: right;">13.29</td>
+<td style="text-align: right;">11.43</td>
+<td style="text-align: right;">85.29</td>
+</tr>
+<tr>
+<td style="text-align: left;">SD</td>
+<td style="text-align: right;">12.08</td>
+<td style="text-align: right;">13.64</td>
+<td style="text-align: right;">12.62</td>
+<td style="text-align: right;">12.40</td>
+<td style="text-align: right;">13.16</td>
+<td style="text-align: right;">10.63</td>
+<td style="text-align: right;">13.83</td>
+<td style="text-align: right;">12.04</td>
+</tr>
+</tbody>
+</table>
+
+
 #### 2.3.5 How to display a similarity matrix as a heatmap?
+
+
+Simply applying function **kmeRs\_heatmap** to the result matrix.
+
+```r
+# Heatmap without sum column
+  kmeRs_heatmap(kmers_res[, -8])  
+```
+
+![](github-pages/heatmap-7-1.png)
 
 
 ### 2.3 Tutorials

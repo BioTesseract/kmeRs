@@ -3,9 +3,9 @@ title: "Introduction to the kmeRs package"
 author:
 - name: Rafal Urniaz, PhD^[OncoCDx Research Center, London, UK]
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: #rmarkdown::html_vignette
   # pdf_document
-  # md_document:
+   md_document:
   #    variant: markdown_github
 bibliography: citations.bib
 vignette: >
