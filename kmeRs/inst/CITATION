@@ -1,11 +1,8 @@
-citHeader("To cite kmeRs in publications use:")
-
-citEntry(entry = "Manual",
-   title = "kmeRs: an R package for k-mers similarity score matrix",
-   author = personList(as.person("Rafal Urniaz")),
-   url = "https://cran.r-project.org/package=kmeRs",
-   year   = "2024",
-   textVersion = "2.1.0",
-   paste("Urniaz RD (2024) kmeRs: an R package for k-mers similarity score matrix. R package version 2.1.0.",
-         "https://cran.r-project.org/package=kmeRs")
+bibentry(
+  bibtype  = "Manual",
+  title    = "kmeRs: an R package for k-mers similarity score matrix",
+  author   = c(as.person("Rafal Urniaz")),
+  year     = "2024",
+  url      = "https://cran.r-project.org/package=kmeRs",
+  textVersion = "2.1.0"
 )

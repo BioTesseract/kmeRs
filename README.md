@@ -22,7 +22,7 @@ Comprehensive tool to calculate similarity score matrix for nucleic and amino ac
 
 [4. How to cite](#how-to-cite)
 
-## Installation
+## 1. Installation
 
 **Bioconductor Packages** need to be installed first,
 ```r
@@ -43,22 +43,35 @@ install.packages("devtools")
 devtools::install_github("urniaz/kmeRs/kmeRs/")
 ```
 
-## Documentation
-### Functions
+## 2. Documentation
+
+### 2.1 Functions
 The documentation for package including user guides, package vignettes, descriptions of the functions and other documentation is simply accessible by running command below.
 
 ```r
 # To show the manual and functions' descriptions 
 help(package = "kmeRs")
 ```
-### Tutorials and examples
+
+### 2.2 Examples
+
+#### 2.3.1 How to display BLOSUM matrix used for amino acides calculation?
+
+#### 2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?
+
+#### 2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers?
+
+#### 2.3.4 How to calculate basic statistics for the matrix?
+
+#### 2.3.5 How to display a similarity matrix as a heatmap?
+
+
+### 2.3 Tutorials and examples
 Package vignettes [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by commands:
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
 ```
-### Examples
-#### How to display PAM or BLOSUM matrix used for amino acides calculation?
 
 ## Tests
 The tests covering the code of package are available in [/kmeRs/tests/](/kmeRs/tests/) folder of the repository.
