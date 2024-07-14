@@ -73,6 +73,7 @@ Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate m
   knitr::kable(BLOSUM62)
 ```
 
+
 <table style="width:100%;">
 <colgroup>
 <col style="width: 4%" />
@@ -587,6 +588,125 @@ Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate m
 </table>
 
 #### 2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?
+
+
+In this example, the most *‘different’* k-mer to “GATTACA” sequence will
+be indicated from given set of heptamers. Here, 7 heptamer (being an
+anagram of the movie title “GATTACA”) are given, as follow:
+
+```r
+    # Given hexamers
+      kmers_given <- c("GATTACA", "ACAGATT", "GAATTAC", "GAAATCT", "CTATAGA", "GTACATA", "AACGATT")
+    # Matrix calculation 
+      kmers_mat <- kmeRs_similarity_matrix(q = c("GATTACA"), x = kmers_given , submat = "BLOSUM62") 
+    # Fancy knitr table
+      knitr::kable(kmers_mat) 
+```
+
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">GATTACA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">GATTACA</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr>
+<td style="text-align: left;">ACAGATT</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAATTAC</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAAATCT</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: left;">CTATAGA</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: left;">GTACATA</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: left;">AACGATT</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+
+Now, applying **kmeRs\_score** function the total score is calculated
+and the matrix is sorted by increasing score value. The lowest value (in
+case of BLOSUM) indicates the most *‘different’* sequence from given
+k-mers, in contrast to the highest value which indicates the most
+similar one.
+
+    # Score and sort the matrix  
+      kmers_res <- kmeRs_score(kmers_mat)
+    # Fancy knitr table
+      knitr::kable(kmers_res)
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">GATTACA</th>
+<th style="text-align: right;">Sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ACAGATT</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">AACGATT</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: left;">CTATAGA</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: left;">GTACATA</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAATTAC</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: left;">GAAATCT</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">19</td>
+</tr>
+<tr>
+<td style="text-align: left;">GATTACA</td>
+<td style="text-align: right;">37</td>
+<td style="text-align: right;">37</td>
+</tr>
+</tbody>
+</table>
+
+As can be observed, the most *‘different’* sequence to GATTACA is
+ACAGATT with total score equal to 1 and the most similar to GATTACA
+sequence is of course GATTACA sequence with the highest score equal to
+37.
+
+
 
 #### 2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers?
 
