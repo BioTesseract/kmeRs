@@ -73,7 +73,518 @@ Simply apply the **kmeRs_similarity_matrix** function and mark the appropriate m
   knitr::kable(BLOSUM62)
 ```
 
-
+<table style="width:100%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+<col style="width: 4%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: right;">G</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">L</th>
+<th style="text-align: right;">M</th>
+<th style="text-align: right;">F</th>
+<th style="text-align: right;">W</th>
+<th style="text-align: right;">K</th>
+<th style="text-align: right;">Q</th>
+<th style="text-align: right;">E</th>
+<th style="text-align: right;">S</th>
+<th style="text-align: right;">P</th>
+<th style="text-align: right;">V</th>
+<th style="text-align: right;">I</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">Y</th>
+<th style="text-align: right;">H</th>
+<th style="text-align: right;">R</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: right;">D</th>
+<th style="text-align: right;">T</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">G</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">L</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">M</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">W</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">K</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Q</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">S</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: left;">P</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">V</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">I</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">Y</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">H</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">R</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">N</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">5</td>
+</tr>
+</tbody>
+</table>
 
 #### 2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?
 
