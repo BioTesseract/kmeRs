@@ -1,6 +1,6 @@
 Version 2.1.0 beta is available now! Construction works are ongoing! :D
 
-![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  ![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/98%25-brightgreen?style=flat&logo=Codacy&label=coverage)
+![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  ![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/98%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)
 
 
 
