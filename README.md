@@ -5,23 +5,25 @@ Version 2.1.0 beta is available now! Construction works are ongoing! :D
 
 # kmeRs: K-Mers Similarity Score Matrix
 
-Comprehensive tool to calculate similarity score matrix for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and/or Smith-Waterman. 
+Comprehensive tool to calculate and heatmap similarity score matrix for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and/or BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and/or Smith-Waterman. 
 
-[1. Installation](#installation)
+[1. Installation](#1-installation)
 
-[2. Documentation](#documentation)
-- [2.1 Functions](#)
-- [2.2 Examples](#)
-    - [2.3.1 How to display BLOSUM matrix used for amino acides calculation?](#how-to-display-pam-or-blosum-matrix-used-for-amino-acides-calculation)
-    - [2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?](#)
-    - [2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers? ](#)
-    - [2.3.4 How to calculate basic statistics for the matrix?](#)
-    - [2.3.5 How to display a similarity matrix as a heatmap?](#)
-- [2.3 Tutorials](#)
+[2. Documentation](#2-documentation)
+- [2.1 Functions](#21-functions)
+- [2.2 Examples](#22-examples)
+    - [2.3.1 How to display BLOSUM matrix used for amino acides calculation?](#231-how-to-display-blosum-matrix-used-for-amino-acides-calculation)
+    - [2.3.2 How to find the most *'different'* k-mer from the *'given'* set of k-mers?](#232-how-to-find-the-most-different-k-mer-from-the-given-set-of-k-mers)
+    - [2.3.3 How to find the most *'different'* k-mer to *'whole'* given set of k-mers? ](#233-how-to-find-the-most-different-k-mer-to-whole-given-set-of-k-mers)
+    - [2.3.4 How to calculate basic statistics for the matrix?](#234-how-to-calculate-basic-statistics-for-the-matrix)
+    - [2.3.5 How to display a similarity matrix as a heatmap?](#235-how-to-display-a-similarity-matrix-as-a-heatmap)
+- [2.3 Tutorials](##23-tutorials)
     
 [3. Tests](#tests)
 
 [4. How to cite](#how-to-cite)
+
+[5. Acknowledgement](#how-to-cite)
 
 ## 1. Installation
 
@@ -67,16 +69,23 @@ help(package = "kmeRs")
 #### 2.3.5 How to display a similarity matrix as a heatmap?
 
 
-### 2.3 Tutorials and examples
+### 2.3 Tutorials
 Package vignettes [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by commands:
 ```r
 # To show the introduction vignette
 vignette("Introduction_to_kmeRs_package", package="kmeRs")
 ```
 
-## Tests
-The tests covering the code of package are available in [/kmeRs/tests/](/kmeRs/tests/) folder of the repository.
+## 3. Tests
 
-## How to cite
+Test are implemented as continuous integration by CircleCI. Continuous integration is a DevOps software development practice where code changes are regularly merge into a central repository, after which automated builds and tests are run.
+
+The source of tests covering the code of the package are available in [/kmeRs/tests/](/kmeRs/tests/) folder of the repository.
+
+## 4. How to cite
 
 TBA
+
+## 5. Acknowledgement
+
+Special thanks to Jason Lin, PhD from Chiba Cancer Center Research Institute, Chiba, Japan for contribution in 2021 as implementing of heatmap function and update deprecated functions. The kmeRs_generate_kmers and kmeRs_twoSeqSim base on orginal source from tcR and rDNAse, respectively.
