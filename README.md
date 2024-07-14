@@ -2,11 +2,9 @@ Version 2.1.0 beta is available now! Construction works are ongoing! :D
 
 ![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  ![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/98%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)
 
-![CRAN/METACRAN License](https://img.shields.io/cran/l/kmeRs)
-
 
 ![CRAN/METACRAN License](https://img.shields.io/cran/l/kmeRs)
-
+![CRAN/METACRAN Version](https://img.shields.io/cran/v/kmeRs)
 
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/kmeRs)](https://cran.r-project.org/package=kmeRs) 
