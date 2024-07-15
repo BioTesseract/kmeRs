@@ -1,7 +1,7 @@
 title: " "
 description: 
-layouts_dir: github-pages/_layouts
-logo: github-pages/kmeRs_logo_flat.png
+layouts_dir: docs/_layouts
+logo: docs/kmeRs_logo_flat.png
 theme: jekyll-theme-minimal
 show_downloads: true
 google_site_verification: XqjgDDzQlNamaGft-wYZtx565x3YrDmJa-e2nsku1fU

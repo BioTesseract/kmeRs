@@ -1019,7 +1019,7 @@ Simply applying function **kmeRs\_heatmap** to the result matrix.
   kmeRs_heatmap(kmers_res[, -8])  
 ```
 
-![](github-pages/heatmap-7-1.png)
+![](docs/heatmap-7-1.png)
 
 
 ### 2.3 Tutorials
