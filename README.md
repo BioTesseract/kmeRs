@@ -1,16 +1,9 @@
-Version 2.1.0 beta is available now! Construction works are ongoing! :D
-
 ![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  ![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/98%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  ![CRAN/METACRAN License](https://img.shields.io/cran/l/kmeRs)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/kmeRs)
 
 
-# kmeRs: K-mers Similarity Score HeatMap
+# kmeRs: Similarity Score Matrix and HeatMap for Nucleic and Amino acid K-mers 
 
-
-Similarity Score HeatMap for Nucleic and Amino acid K-mers.
-
-The PAM (30, 40, 70, 120, 250), BLOSUM (62, 45, 50, 62, 80, 100) substitution matrix available. 
-
-The Needleman-Wunsch, Smith-Waterman alignments available. 
+Comprehensive tool to calculate similarity score matrix and generate heatmap for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and Smith-Waterman.  
 
 
 [1. Installation](#1-installation)
