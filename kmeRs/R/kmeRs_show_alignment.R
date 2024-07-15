@@ -96,7 +96,7 @@ kmeRs_twoSeqSim <- function(kmer_A, kmer_B, seq.type = "AA",
       }
       if (!is.na(submat)) {
         if (verbose) {
-          message(sprintf(
+          cat(sprintf(
             "Nucleic acid inputs with %s as substitution matrix...", submat))
         }
       }
