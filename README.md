@@ -3,7 +3,7 @@
 
 # kmeRs: K-mers Similarity Score Matrix and HeatMap
 
-Comprehensive tool to calculate similarity score matrix and generate heatmap for nucleic and amino acid k-mers. Similarity score is evaluated by PAM and BLOSUM substitution matrix. The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch and Smith-Waterman.  
+Similarity Score Matrix and HeatMap for nucleic and amino acid k-mers. Similarity score is evaluated by Point Accepted Mutation (PAM) and BLOcks SUbstitution Matrix (BLOSUM). The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by Needleman-Wunsch[1](#6-references) and Smith-Waterman[2](#6-references).  
 
 
 [1. Installation](#1-installation)
@@ -1052,11 +1052,6 @@ Special thanks to Jason Lin, PhD from Chiba Cancer Center Research Institute, Ch
 
 ## 6. References
 
-Needleman, Saul B., and Christian D. Wunsch. 1970. “A General Method
-Applicable to the Search for Similarities in the Amino Acid Sequence of
-Two Proteins.” *Journal of Molecular Biology* 48 (3): 443–53.
-<https://doi.org/10.1016/0022-2836(70)90057-4>.
+1. Needleman, Saul B., and Christian D. Wunsch. 1970. “A General Method Applicable to the Search for Similarities in the Amino Acid Sequence of Two Proteins.” *Journal of Molecular Biology* 48 (3): 443–53. <https://doi.org/10.1016/0022-2836(70)90057-4>.
 
-Smith, T. F., and M. S. Waterman. 1981. “Identification of Common
-Molecular Subsequences.” *Journal of Molecular Biology* 147 (1): 195–97.
-<https://doi.org/10.1016/0022-2836(81)90087-5>.
+2. Smith, T. F., and M. S. Waterman. 1981. “Identification of Common Molecular Subsequences.” *Journal of Molecular Biology* 147 (1): 195–97. <https://doi.org/10.1016/0022-2836(81)90087-5>.
