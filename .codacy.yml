@@ -3,4 +3,3 @@ exclude_paths:
   - '**.html'
   - 'tutorials/**'
   - 'docs/**'
-
