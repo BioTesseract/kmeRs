@@ -12,3 +12,4 @@ kmeRs/kmeRs/vignettes/*.html linguist-vendored
 *.Rdx       binary
 *.Rmd		text
 *.R text
+
