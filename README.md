@@ -11,7 +11,7 @@ Similarity Score Matrix and HeatMap for nucleic and amino acid k-mers. Similarit
   </tr>
 </table>
 
-<right><img src="https://github.com/urniaz/kmeRs/blob/master/docs/heatmap-7-1.png?raw=true"></img></right>
+<img width="25%" src="https://github.com/urniaz/kmeRs/blob/master/docs/heatmap-7-1.png?raw=true"></img>
 
 [1. Installation](#1-installation)
 
