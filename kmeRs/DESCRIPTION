@@ -1,5 +1,5 @@
 Package: kmeRs
-Title: k-Mers Similarity Score Matrix 
+Title: K-Mers Similarity Score Matrix and HeatMap
 Version: 2.1.0
 Authors@R: c(
 	person("Rafal", "Urniaz", comment = c(ORCID = "0000-0003-0192-2165"),
