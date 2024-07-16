@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/%20Bioconductor%20BiocCheck-true-green.svg)  ![Static Badge](https://img.shields.io/badge/A-brightgreen?style=flat&logo=Codacy&label=code%20quality)  ![Static Badge](https://img.shields.io/badge/100%25-brightgreen?style=flat&logo=Codacy&label=coverage)  ![](https://img.shields.io/badge/build-passing-brightgreen?style=flat&label=circleci)  ![CRAN/METACRAN License](https://img.shields.io/cran/l/kmeRs)  ![CRAN/METACRAN Version](https://img.shields.io/cran/v/kmeRs)
 
 
-# kmeRs: K-mers Similarity Score Matrix and HeatMap <img width="20%" src="https://github.com/urniaz/kmeRs/blob/master/docs/heatmap-7-2.png?raw=true"> 
+# kmeRs: K-mers Similarity Score Matrix and HeatMap
 
 <table width="100%" border="0">
   <tbody><tr>
