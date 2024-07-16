@@ -5,6 +5,11 @@
 
 Similarity Score Matrix and HeatMap for nucleic and amino acid k-mers. Similarity score is evaluated by Point Accepted Mutation (PAM) and BLOcks SUbstitution Matrix (BLOSUM). The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by local <sup>[1](#6-references)</sup> and global <sup>[2](#6-references)</sup> alignment. 
 
+<style>
+td, th {
+   border: none!important;
+}
+</style>
 
 <table width="100%" border="0">
   <tr>
