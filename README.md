@@ -1029,7 +1029,7 @@ Simply applying function **kmeRs\_heatmap** to the result matrix.
 
 ### 2.3 Tutorials
 
-Package vignettes are avaliable in [/kmeRs/vignettes/](/kmeRs/vignettes/) folder of the repository or directly from the package by command:
+Package vignettes are avaliable in [/kmeRs/vignettes/](https://github.com/urniaz/kmeRs/blob/master/kmeRs/vignettes) folder of the repository or directly from the package by command:
 
 ```r
 # To show the introduction vignette
