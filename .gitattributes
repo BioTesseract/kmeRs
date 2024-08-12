@@ -1,4 +1,4 @@
-# Basic .gitattributes for a R repo.
+# Basic .gitattributes for a R repo. 
 
 kmeRs/docs/* linguist-vendored
 kmeRs/kmeRs/vignettes/*.html linguist-vendored
