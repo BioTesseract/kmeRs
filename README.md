@@ -3,6 +3,8 @@
 
 # kmeRs: K-mers Similarity Score Matrix and HeatMap
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82523e1445d147a7b090aba96888c074)](https://app.codacy.com/gh/urniaz/kmeRs?utm_source=github.com&utm_medium=referral&utm_content=urniaz/kmeRs&utm_campaign=Badge_Grade)
+
 <table width="100%" border="0">
   <tbody><tr>
     <td width="80%">Similarity Score Matrix and HeatMap for nucleic and amino acid k-mers. Similarity score is evaluated by Point Accepted Mutation (PAM) and BLOcks SUbstitution Matrix (BLOSUM). The 30, 40, 70, 120, 250 and 62, 45, 50, 62, 80, 100 matrix versions are available for PAM and BLOSUM, respectively. Alignment is evaluated by local <sup><a href="#6-references"> 1</a></sup> and global <sup><a href="#6-references"> 2</a></sup> alignment. </td>
