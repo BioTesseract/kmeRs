@@ -1046,7 +1046,11 @@ The *source* of tests covering the code of the package are available in [/kmeRs/
 
 ## 4. How to cite
 
-TBA
+When applying kmeRs please cite both: 
+
+- CRAN repository : https://doi.org/10.32614/cran.package.kmers
+- Original paper : TBA
+
 
 
 ## 5. Acknowledgement
